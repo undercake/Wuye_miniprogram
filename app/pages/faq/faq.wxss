@@ -1,0 +1,58 @@
+/* pages/faq/faq.wxss */
+page{
+    background: #fff;
+}
+
+.header{
+    width: 100%;
+    height: 400rpx;
+}
+
+.header image{
+    width: 100%;
+    height: 100%;
+}
+
+.tabbar{
+    background: #145aa1;
+    color:#fff;
+}
+
+.searchBar{
+    padding: 0 30rpx;
+    border-radius: 30rpx;
+    background: #fff;
+    height: 55rpx !important;
+}
+
+.searchBar input{
+    width: 100%;
+    text-align: left;
+    color:#000;
+    z-index: 99;
+}
+
+.nav{
+    z-index: 99;
+    display: flex;
+    border-top: 1px solid #d1d3d4;
+    border-bottom: 1px solid #d1d3d4;
+    background: #fff;
+}
+.nav-son{
+    display: flex;
+    text-align: center;
+    height: 40px;
+    align-items:center;
+    justify-content:center;
+    font-size: 14px;
+}
+
+.item{
+    padding: 0 30rpx;
+    font-size: 30rpx;
+    border-width: 0 0 5rpx;
+    border-style: solid;
+    border-color: #eee;
+    line-height: 90rpx;
+}

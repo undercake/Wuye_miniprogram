@@ -1,0 +1,32 @@
+<!--pages/faq/faq.wxml-->
+<view class="header">
+    <image src="{{imgurl}}"></image>
+</view>
+<view>
+
+    <form bindsubmit='searchBox'>
+        <view class="dsp_flex flex_row tabbar middle">
+            <view class="nav-son flex_cell_1" bindtap="showList" data-nav="5">
+                <view class="content">关键词</view>
+                <view class="icon"></view>
+            </view>
+            <view class="nav-son flex_cell_4 middle searchBar" data-nav="5">
+
+                <input type="text" bindfocus="showList" bindblur="_blur" data-nav="100" name="search"></input>
+            </view>
+            <view class="nav-son flex_cell_1">
+                <button form-type='submit' style="background: none; border: 0;color:#fff;" class="content iconfont icon-search"></button>
+            </view>
+        </view>
+    </form>
+</view>
+
+<view>
+    <block wx:for="{{listData}}" wx:for-index="idx" wx:for-item="itm">
+        <view class="item">
+            <navigator url="/pages/detail/detail?from=faq&id={{itm.id}}">
+                {{itm.title}}
+            </navigator>
+        </view>
+    </block>
+</view>

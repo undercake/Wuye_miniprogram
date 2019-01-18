@@ -1,0 +1,48 @@
+/* pages/account/account.wxss */
+page{
+    font-size: 30rpx;
+}
+
+.header{
+    height: 300rpx;
+    background: #05509d;
+    width:100%;
+}
+
+.header .avata{
+    width: 160rpx;
+    height: 160rpx;
+    border-radius: 50%;
+    background: #E6DB74;
+    margin: 60rpx auto 20rpx;
+}
+
+
+.header view{
+    color: #fff;
+}
+
+.item{
+    background: #fff;
+    margin-top: 15rpx;
+    padding: 25rpx 40rpx;
+}
+
+.item .iconfont{
+    font-size: 35rpx;
+    color: #06519d;
+}
+
+.icon-right{
+    color: #888;
+}
+
+button.login{
+    color: #fff;
+    background: #09559f;
+    display: block;
+}
+
+.hide{
+    display: none;
+}

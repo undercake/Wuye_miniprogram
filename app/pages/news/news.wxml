@@ -1,0 +1,55 @@
+<!--pages/news/news.wxml-->
+<view>
+
+
+    <view style="margin: 10rpx 0;">
+        <navigator url="/pages/detail/detail?from=news&newsid=110" style="margin-top: 10rpx;background-color: #fff;padding:15rpx 0">
+            <view class="dsp_flex">
+                <view class="flex_cell_6 txt_center"><image class="m_a" style="width:230rpx;height:150rpx" src="http://127.0.0.1:8888/miniapp/wuye/1.png"></image></view>
+                <view class="flex_cell_10">
+                    <view class="title txt_center" style="padding:15rpx 0;">这个是一个标题</view>
+                    <view class="container" style="padding: 5rpx 20rpx;height: 80rpx;overflow: hidden;">公司会计两年内空冷阿卡；给你看个哪能刚给你的发个；都发给你的客服给你看了都发给你你考虑的烦恼；...</view>
+                </view>
+            </view>
+        </navigator>
+        <navigator url="/pages/detail/detail?from=news&newsid=110" style="margin-top: 10rpx;background-color: #fff;padding:15rpx 0">
+            <view class="dsp_flex">
+                <view class="flex_cell_6 txt_center"><image class="m_a" style="width:230rpx;height:150rpx" src="http://127.0.0.1:8888/miniapp/wuye/1.png"></image></view>
+                <view class="flex_cell_10">
+                    <view class="title txt_center" style="padding:15rpx 0;">这个是一个标题</view>
+                    <view class="container" style="padding: 5rpx 20rpx;height: 80rpx;overflow: hidden;">公司会计两年内空冷阿卡；给你看个哪能刚给你的发个；都发给你的客服给你看了都发给你你考虑的烦恼；...</view>
+                </view>
+            </view>
+        </navigator>
+
+        <navigator url="/pages/detail/detail?from=news&newsid=110" style="margin-top: 10rpx;background-color: #fff;padding:15rpx 0">
+            <view class="dsp_flex">
+                <view class="flex_cell_6 txt_center"><image class="m_a" style="width:230rpx;height:150rpx" src="http://127.0.0.1:8888/miniapp/wuye/1.png"></image></view>
+                <view class="flex_cell_10">
+                    <view class="title txt_center" style="padding:15rpx 0;">这个是一个标题</view>
+                    <view class="container" style="padding: 5rpx 20rpx;height: 80rpx;overflow: hidden;">公司会计两年内空冷阿卡；给你看个哪能刚给你的发个；都发给你的客服给你看了都发给你你考虑的烦恼；...</view>
+                </view>
+            </view>
+        </navigator>
+
+        <navigator url="/pages/detail/detail?from=news&newsid=110" style="margin-top: 10rpx;background-color: #fff;padding:15rpx 0">
+            <view class="dsp_flex">
+                <view class="flex_cell_6 txt_center"><image class="m_a" style="width:230rpx;height:150rpx" src="http://127.0.0.1:8888/miniapp/wuye/1.png"></image></view>
+                <view class="flex_cell_10">
+                    <view class="title txt_center" style="padding:15rpx 0;">这个是一个标题</view>
+                    <view class="container" style="padding: 5rpx 20rpx;height: 80rpx;overflow: hidden;">公司会计两年内空冷阿卡；给你看个哪能刚给你的发个；都发给你的客服给你看了都发给你你考虑的烦恼；...</view>
+                </view>
+            </view>
+        </navigator>
+
+        <navigator url="/pages/detail/detail?from=news&newsid=110" style="margin-top: 10rpx;background-color: #fff;padding:15rpx 0">
+            <view class="dsp_flex">
+                <view class="flex_cell_6 txt_center"><image class="m_a" style="width:230rpx;height:150rpx" src="http://127.0.0.1:8888/miniapp/wuye/1.png"></image></view>
+                <view class="flex_cell_10">
+                    <view class="title txt_center" style="padding:15rpx 0;">这个是一个标题</view>
+                    <view class="container" style="padding: 5rpx 20rpx;height: 80rpx;overflow: hidden;">公司会计两年内空冷阿卡；给你看个哪能刚给你的发个；都发给你的客服给你看了都发给你你考虑的烦恼；...</view>
+                </view>
+            </view>
+    	</navigator>
+    </view>
+</view>

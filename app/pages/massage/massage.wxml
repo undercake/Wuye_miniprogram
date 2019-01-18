@@ -1,0 +1,75 @@
+<!--pages/news/news.wxml-->
+<view>
+
+
+    <view style="margin: 10rpx 0;">
+        <navigator style="margin-top: 10rpx;background-color: #fff;padding:15rpx 0">
+            <view class="dsp_flex notice">
+               	<view class="flex_cell_1">
+               		<image style="width:80rpx;height:61rpx" src="/img/bubble.png"></image>
+                </view>
+                <view class="flex_col flex_cell_4">
+                	<view>XX小区</view>
+                	<view>2019-9-9</view>
+                </view>
+            </view>
+            <view class="title txt_center" style="padding:15rpx 0;">XXX小区修水管停水通知</view>
+        </navigator>
+
+        <navigator style="margin-top: 10rpx;background-color: #fff;padding:15rpx 0">
+            <view class="dsp_flex notice">
+               	<view class="flex_cell_1">
+               		<image style="width:80rpx;height:61rpx" src="/img/bubble.png"></image>
+                </view>
+                <view class="flex_col flex_cell_4">
+                	<view>XX小区</view>
+                	<view>2019-9-9</view>
+                </view>
+            </view>
+            <view class="title txt_center" style="padding:15rpx 0;">XXX小区修水管停水通知</view>
+        </navigator>
+
+
+        <navigator style="margin-top: 10rpx;background-color: #fff;padding:15rpx 0">
+            <view class="dsp_flex notice">
+               	<view class="flex_cell_1">
+               		<image style="width:80rpx;height:61rpx" src="/img/bubble.png"></image>
+                </view>
+                <view class="flex_col flex_cell_4">
+                	<view>XX小区</view>
+                	<view>2019-9-9</view>
+                </view>
+            </view>
+            <view class="title txt_center" style="padding:15rpx 0;">XXX小区修水管停水通知</view>
+        </navigator>
+
+
+        <navigator style="margin-top: 10rpx;background-color: #fff;padding:15rpx 0">
+            <view class="dsp_flex notice">
+               	<view class="flex_cell_1">
+               		<image style="width:80rpx;height:61rpx" src="/img/bubble.png"></image>
+                </view>
+                <view class="flex_col flex_cell_4">
+                	<view>XX小区</view>
+                	<view>2019-9-9</view>
+                </view>
+            </view>
+            <view class="title txt_center" style="padding:15rpx 0;">XXX小区修水管停水通知</view>
+        </navigator>
+
+
+        <navigator style="margin-top: 10rpx;background-color: #fff;padding:15rpx 0">
+            <view class="dsp_flex notice">
+               	<view class="flex_cell_1">
+               		<image style="width:80rpx;height:61rpx" src="/img/bubble.png"></image>
+                </view>
+                <view class="flex_col flex_cell_4">
+                	<view>XX小区</view>
+                	<view>2019-9-9</view>
+                </view>
+            </view>
+            <view class="title txt_center" style="padding:15rpx 0;">XXX小区修水管停水通知</view>
+    	</navigator>
+
+    </view>
+</view>

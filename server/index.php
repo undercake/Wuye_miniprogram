@@ -1,0 +1,19 @@
+<?php
+echo json_encode(
+  array('2018'=>array(
+    array('name'=>'12月账单','charge'=>1202.30,'checked'=>false),
+    array('name'=>'11月账单','charge'=>1202.30,'checked'=>false),
+    array('name'=>'10月账单','charge'=>1202.30,'checked'=>false),
+    array('name'=>'9月账单','charge'=>1202.30,'checked'=>false),
+    array('name'=>'8月账单','charge'=>1202.30,'checked'=>false),
+    array('name'=>'7月账单','charge'=>1202.30,'checked'=>false),
+    array('name'=>'6月账单','charge'=>1202.30,'checked'=>false),
+    array('name'=>'5月账单','charge'=>1202.30,'checked'=>false),
+    array('name'=>'4月账单','charge'=>1202.30,'checked'=>false),
+    array('name'=>'3月账单','charge'=>1202.30,'checked'=>false),
+    array('name'=>'2月账单','charge'=>1202.30,'checked'=>false),
+    array('name'=>'1月账单','charge'=>1202.30,'checked'=>false),
+  ),
+    '2017'=>array(array('name'=>'12月账单','charge'=>1202.30,'checked'=>false))
+    )
+);

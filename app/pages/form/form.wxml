@@ -1,0 +1,45 @@
+<page>
+    <form bindsubmit='searchBox'>
+        <view class="devide dsp_flex">
+            <view class="txt_center flex_cell_1 middle label"><text class="m_a">业主姓名</text></view>
+            <view class="dsp_flex flex_cell_3 middle">
+                <input name="name" type="text" />
+            </view>
+        </view>
+        <view class="devide dsp_flex">
+            <view class="txt_center flex_cell_1 middle label"><text class="m_a">业主地址</text></view>
+            <view class="dsp_flex flex_cell_3 middle">
+                <input name="add" type="text" />
+            </view>
+        </view>
+        <view class="devide dsp_flex">
+            <view class="txt_center flex_cell_1 middle label"><text class="m_a">{{type}}标题</text></view>
+            <view class="dsp_flex flex_cell_3 middle">
+                <input name="title" type="text" />
+            </view>
+        </view>
+        <view class="devide dsp_flex">
+            <view class="txt_center flex_cell_1 middle label"><text class="m_a">电话号码</text></view>
+            <view class="dsp_flex flex_cell_3 middle">
+                <input name="phone" type="text" />
+            </view>
+        </view>
+        <view class="devide dsp_flex">
+            <view class="txt_center flex_cell_1 label"><text class="m_a">问题描述</text></view>
+            <view style="padding:30rpx 0" class="dsp_flex flex_cell_3 middle">
+                <textarea name="detail" auto-height type="text" />
+            </view>
+        </view>
+        <view class="devide dsp_flex">
+            <view class="txt_center flex_cell_1 middle label"><text class="m_a">上传图片</text></view>
+            <view class="dsp_flex flex_cell_3 middle"></view>
+        </view>
+        <view class="blk dsp_flex">
+            <view class="middle cell dsp_flex">
+                <text class="m_a iconfont icon-plus"></text></view>
+        </view>
+        <view class="devide dsp_flex" style="margin-top:25rpx;background-color: #ececec;">
+            <button class='submit' form-type='submit'>提交</button>
+        </view>
+    </form>
+</page>

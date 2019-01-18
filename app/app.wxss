@@ -1,0 +1,117 @@
+/**app.wxss**/
+@import 'utils/iconfont.wxss';
+/**app.wxss**/
+page{
+  background-color: #ececec;
+  color: #666;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding: 5rpx 35rpx;
+  font-size: 24rpx;
+  line-height: 40rpx;
+  color: #666;
+}
+.fixed{
+  position: fixed;
+}
+.title{
+	padding:20rpx 0;
+	font-size: 30rpx;
+}
+
+.sup{
+     font-size: 18rpx;
+     vertical-align:text-top;
+}
+
+.sub{
+     font-size: 18rpx;
+     vertical-align:text-bottom;
+}
+
+
+.txt_center{
+  text-align: center;
+}
+
+.top{
+  align-items:flex-start;
+}
+
+.middle{
+  align-items:center;
+}
+
+.flex_col{
+  flex-direction:column;
+}
+
+.flex_row{
+  flex-direction:row;
+}
+
+.flx_center{
+  display: flex;
+  align-items: center;
+}
+
+.m_a{
+  margin:auto;
+}
+/******************* gird ***********************/
+.inline_view{
+  display: inline;
+}
+
+.dsp_flex{
+  display: flex;
+}
+
+.flex_cell_1{
+  flex: 1;
+}
+
+.flex_cell_auto{
+  flex: auto;
+}
+
+.flex_cell_2{
+  flex: 2;
+}
+
+.flex_cell_3{
+  flex: 3;
+}
+
+.flex_cell_4{
+  flex: 4;
+}
+
+.flex_cell_5{
+  flex: 5;
+}
+
+.flex_cell_6{
+  flex: 6;
+}
+
+.flex_cell_7{
+  flex: 7;
+}
+
+.flex_cell_8{
+  flex: 8;
+}
+
+.flex_cell_9{
+  flex: 9;
+}
+
+.flex_cell_10{
+  flex: 10;
+}

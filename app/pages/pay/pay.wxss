@@ -1,0 +1,56 @@
+page{
+    font-size: 26rpx;
+}
+
+.notice{
+  color: #444;
+  font-size: 24rpx;
+  padding: 15rpx 40rpx 10rpx;
+}
+
+checkbox{
+    margin-left: 25rpx;
+    width: 80%;
+}
+
+/* 未选中的 背景样式 */
+checkbox .wx-checkbox-input{
+   border-radius: 50%;/* 圆角 */
+   width: 20 rpx; /* 背景的宽 */
+   height: 20 rpx; /* 背景的高 */
+   line-height: 30rpx;
+   font-size:12rpx; /* 对勾大小 30rpx */
+   text-align: center;
+}
+/* 选中后的 背景样式 （蓝色背景 蓝色边框 可根据UI需求自己修改） */
+checkbox .wx-checkbox-input.wx-checkbox-input-checked{
+   border-color: #05509d;
+   background: #05509d;
+}
+/* 选中后的 对勾样式 （白色对勾 可根据UI需求自己修改） */
+checkbox .wx-checkbox-input.wx-checkbox-input-checked::before{
+   color:#fff; /* 对勾颜色 白色 */
+}
+
+navigator text{
+    background: #05509d;
+    padding:5rpx 20rpx;
+    border-radius: 20rpx;
+    font-size: 19.5rpx;
+    color:#fff;
+}
+
+.sumit{
+    line-height: 40rpx;
+    width: 100%;
+    display: block;
+    background: #fff;
+    padding: 25rpx 40rpx;
+    border-top: solid 1rpx #d4d4d4;
+    position: fixed;
+    bottom: 0;
+}
+
+.sumit navigator text{
+    font-size: 22rpx;
+}

@@ -1,0 +1,10 @@
+/* pages/massage/massage.wxss */
+.notice{
+	font-size: 24rpx;
+}
+
+.notice image{
+	text-align: right;
+	margin:auto;
+	display:block;
+}

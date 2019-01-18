@@ -1,0 +1,59 @@
+/**index.wxss**/
+.itm_list{
+  width: 100%;
+  background: #fff;
+  border-bottom: 2rpx solid #ececec;
+  display: flex;
+}
+
+.itm_list text{
+  text-align: center;
+}
+
+.nav_bar{
+  background:#fff;
+  color: #666;
+  font-size: 24rpx;
+  margin-top:10rpx;
+  padding:22rpx 20rpx;
+}
+
+.topnews{
+	margin-top: 10rpx;
+	background:#fff;
+}
+
+.nav_bar image{
+  width:64rpx;
+  height:64rpx;
+  border-radius:32rpx;
+}
+
+.shop_info > .itm_list{
+  min-height: 60rpx;
+  font-size: 30rpx;
+  line-height: 40rpx;
+  color: #333;
+}
+
+
+.child_float>view{
+  float:left;
+}
+
+.txt_swiper_container{
+  height: 45rpx;
+  border: 1px solid #ccc;
+  border-radius: 10rpx;
+}
+
+
+image.massage{
+  width: 55rpx;
+  height: 45rpx;
+  margin-top: 10rpx;
+}
+
+.txt_swip{
+  height: 100%;
+}

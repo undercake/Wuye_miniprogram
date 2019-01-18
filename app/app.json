@@ -1,0 +1,62 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/pay/pay",
+    "pages/rent/index",
+    "pages/around/around",
+    "pages/account/account",
+    "pages/news/news",
+    "pages/manage/manage",
+    "pages/faq/faq",
+    "pages/massage/massage",
+    "pages/detail/detail"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#05509d",
+    "navigationBarTitleText": "WeChat",
+    "navigationBarTextStyle": "#fff"
+  },
+  "tabBar": {
+    "color": "#999",
+    "selectedColor": "#05509d",
+    "backgroundColor": "#fff",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "公司首页",
+        "iconPath": "/img/home1.png",
+        "selectedIconPath": "/img/home2.png"
+      },
+      {
+        "pagePath": "pages/pay/pay",
+        "text": "物业缴费",
+        "iconPath": "/img/pay1.png",
+        "selectedIconPath": "/img/pay2.png"
+      },
+      {
+        "pagePath": "pages/rent/index",
+        "text": "租赁服务",
+        "iconPath": "/img/rent1.png",
+        "selectedIconPath": "/img/rent2.png"
+      },
+      {
+        "pagePath": "pages/around/around",
+        "text": "周边服务",
+        "iconPath": "/img/around1.png",
+        "selectedIconPath": "/img/around2.png"
+      },
+      {
+        "pagePath": "pages/account/account",
+        "text": "会员中心",
+        "iconPath": "/img/account1.png",
+        "selectedIconPath": "/img/account2.png"
+      }
+    ]
+  },
+  "permission": {
+    "scope.userLocation": {
+      "desc": "你的位置信息将用于确定你所在的小区"
+    }
+  }
+}

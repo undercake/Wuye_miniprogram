@@ -1,0 +1,4 @@
+<!--pages/detail/detail.wxml-->
+<block wx:for="{{opt}}" wx:for-index="idx" wx:for-item="itm">
+    <view><text>{{idx}}</text>: <text>{{itm}}</text></view>
+</block>

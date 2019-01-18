@@ -1,0 +1,94 @@
+<!--index.wxml-->
+<view>
+    <swiper class="banner-swiper" indicator-dots="{{remote_json.swiper.indicatorDots}}" autoplay="{{remote_json.swiper.autoplay}}" interval="{{remote_json.swiper.interval}}" duration="{{remote_json.swiper.duration}}" circular="{{remote_json.swiper.circular}}" style="height:{{remote_json.swiper.height}}rpx">
+        <block wx:for="{{remote_json.swiper.imgUrls}}" wx:key="key">
+            <swiper-item>
+                <image src="{{item}}" class="slide-image" style="width:100%" mode="widthFix"/>
+            </swiper-item>
+        </block>
+    </swiper>
+
+    <view style="margin-top:10rpx;">
+        <view class="itm_list dsp_flex">
+
+            <view class="flex_cell_4 txt_center">
+                <image class="massage" width="20px" style="" src="/img/massage.png" />
+            </view>
+
+            <view class="txt_swiper_container m_a flex_cell_10">
+                <swiper style="height:100%" indicator-dots="{{false}}" autoplay="true" interval="2500" duration="3500" circular="true">
+                    <block wx:for="{{remote_json.massage}}" wx:for-index="idx" wx:for-item="item">
+                        <swiper-item style="display:flex;align-items:center;width:90rpx">
+                            <view style="font-size:26rpx;" class="m_a">{{item}}</view>
+                        </swiper-item>
+                    </block>
+                </swiper>
+            </view>
+            <navigator url='/pages/massage/massage' class="flex_cell_5 dsp_flex flx_center">
+                <view style="font-size:24rpx;color:#fff;width:80%;height:45rpx;border-radius:10rpx;background-color:#05509d" class="txt_center m_a flx_center">
+                    <text class="m_a">更多公告</text>
+                </view>
+            </navigator>
+
+        </view>
+    </view>
+
+    <view class="nav_bar">
+        <view class="dsp_flex">
+            <navigator class="flex_cell_1 txt_center" url="/pages/news/news" open-type="navigate">
+                <image src="/img/01.png" mode="scaleToFill"></image>
+                <view>社区新闻</view>
+            </navigator>
+            <navigator class="flex_cell_1 txt_center" url="/pages/form/form?target=fix" open-type="navigate">
+                <image src="/img/01.png" mode="scaleToFill"></image>
+                <view>维修服务</view>
+            </navigator>
+            <navigator class="flex_cell_1 txt_center" url="/pages/faq/faq" open-type="navigate">
+                <image src="/img/01.png" mode="scaleToFill"></image>
+                <view>常见问题</view>
+            </navigator>
+            <navigator class="flex_cell_1 txt_center" url="/pages/form/form?target=feedback" open-type="navigate">
+                <image src="/img/01.png" mode="scaleToFill"></image>
+                <view>投诉建议</view>
+            </navigator>
+        </view>
+    </view>
+
+    <view class="topnews">
+        <view class="title txt_center">关于我们</view>
+        <navigator url="/pages/detail/detail?from=news&page=top">
+            <view class="container"><text>这是一段公司介绍，并且很长z这是一段公司介绍，并且很长z这是一段公司介绍，并且很长z这是一段公司介绍，并且很长z这是一段公司介绍，并且很长z这是一段公司介绍，并且很长z这是一段公司介绍，并且很长z这是一段公司介绍，并且很长z这是一段公司介绍，并且很长z这是一段公司介绍，并且很长z这是一段公司介绍，并且很长z...<text style="color: #05509d;padding-left:20rpx;display:inline-block">查看更多>></text></text>
+            </view>
+        </navigator>
+    </view>
+
+    <view style="margin: 10rpx 0;">
+        <navigator url="/pages/detail/detail?from=news&detail=100" style="background-color: #fff;padding:15rpx 0">
+            <view class="dsp_flex">
+                <view class="flex_cell_6 txt_center"><image class="m_a" style="width:230rpx;height:150rpx" src="http://127.0.0.1:8888/miniapp/wuye/1.png"></image></view>
+                <view class="flex_cell_10">
+                    <view class="title txt_center" style="padding:15rpx 0;">这个是一个标题</view>
+                    <view class="container" style="padding: 5rpx 20rpx;height: 80rpx;overflow: hidden;">公司会计两年内空冷阿卡；给你看个哪能刚给你的发个；都发给你的客服给你看了都发给你你考虑的烦恼；...</view>
+                </view>
+            </view>
+        </navigator>
+        <navigator url="/pages/detail/detail?from=news&detail=100" style="margin-top: 10rpx;background-color: #fff;padding:15rpx 0">
+            <view class="dsp_flex">
+                <view class="flex_cell_6 txt_center"><image class="m_a" style="width:230rpx;height:150rpx" src="http://127.0.0.1:8888/miniapp/wuye/1.png"></image></view>
+                <view class="flex_cell_10">
+                    <view class="title txt_center" style="padding:15rpx 0;">这个是一个标题</view>
+                    <view class="container" style="padding: 5rpx 20rpx;height: 80rpx;overflow: hidden;">公司会计两年内空冷阿卡；给你看个哪能刚给你的发个；都发给你的客服给你看了都发给你你考虑的烦恼；...</view>
+                </view>
+            </view>
+        </navigator>
+        <navigator url="/pages/detail/detail?from=news&detail=100" style="margin-top: 10rpx;background-color: #fff;padding:15rpx 0">
+            <view class="dsp_flex">
+                <view class="flex_cell_6 txt_center"><image class="m_a" style="width:230rpx;height:150rpx" src="http://127.0.0.1:8888/miniapp/wuye/1.png"></image></view>
+                <view class="flex_cell_10">
+                    <view class="title txt_center" style="padding:15rpx 0;">这个是一个标题</view>
+                    <view class="container" style="padding: 5rpx 20rpx;height: 80rpx;overflow: hidden;">公司会计两年内空冷阿卡；给你看个哪能刚给你的发个；都发给你的客服给你看了都发给你你考虑的烦恼；...</view>
+                </view>
+            </view>
+        </navigator>
+    </view>
+</view>

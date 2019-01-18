@@ -1,0 +1,96 @@
+<!--page/one/index.wxml-->
+<view class="page">
+    <view class="fixed">
+        <form bindsubmit='searchBox'>
+            <view class="header dsp_flex flex_row middle">
+                <view class="nav-son flex_cell_1 {{shownavindex == 5? 'active' : ''}}" bindtap="showList" data-nav="5">
+                    <view class="content">{{location}}</view>
+                    <view class="icon"></view>
+                </view>
+                <view class="nav-son flex_cell_4 middle searchBar" data-nav="5">
+
+                    <input type="text" bindfocus="showList" bindblur="_blur" data-nav="100" name="search"></input>
+                </view>
+                <view class="nav-son flex_cell_1">
+                    <button form-type='submit' style="background: none; border: 0;color:#fff;" class="content iconfont icon-search"></button>
+                </view>
+            </view>
+        </form>
+
+        <view class="nav">
+            <view class="nav-son flex_cell_1 borders {{shownavindex == 1? 'active' : ''}}" bindtap="showList" data-nav="1">
+                <view class="content">{{rent_type.current}}</view>
+                <view class="icon"></view>
+            </view>
+            <view class="nav-son flex_cell_1 {{shownavindex == 2? 'active' : ''}}" bindtap="showList" data-nav="2">
+                <view class="content">{{sort_type.current}}</view>
+                <view class="icon"></view>
+            </view>
+            <view class="nav-son flex_cell_1 {{shownavindex == 3? 'active' : ''}}" bindtap="showList" data-nav="3">
+                <view class="content">{{price.current}}</view>
+                <view class="icon"></view>
+            </view>
+            <view class="nav-son flex_cell_1 {{shownavindex == 4 ? 'active' : ''}}" bindtap="showList" data-nav="4">
+                <view class="content">{{room_count.current}}</view>
+                <view class="icon"></view>
+            </view>
+        </view>
+        <view class="location {{qyopen ? 'slidown' : 'slidup'}}">
+            <view class="dsp_flex">
+                <view class="qy flex_cell_1">
+                    <block wx:for="{{cityleft}}"  wx:for-index="idx" wx:for-item="item">
+                        <view class="{{select1 == index ? 'current' : ''}}" bindtap="selectLocation" data-tpy="left" data-city='{{idx}}'>
+                            {{idx}}
+                        </view>
+                    </block>
+                </view>
+                <view class="qy flex_cell_1">
+                    <view class="{{select2 == index ? 'current2' : ''}}" wx:for="{{citycenter}}" bindtap="selectLocation" data-tpy="center" data-city='{{index}}'>
+                        {{index}}
+                    </view>
+                </view>
+                <view class="qy flex_cell_1">
+                    <block wx:for="{{cityright}}" wx:for-index="idx" wx:for-item="item">
+                        <view bindtap="selectLocation" data-tpy="right" data-idx="{{item}}" data-city='{{idx}}'>
+                            {{idx}}
+                        </view>
+                    </block>
+                </view>
+            </view>
+        </view>
+        <view class="temp temp1 {{content_open ? 'slidown' : 'slidup'}}">
+            <block wx:for="{{content}}" wx:for-index="idx" wx:for-item="item">
+                <view bindtap="selectLocation" data-idx="{{idx}}" data-coun="{{item}}" data-tpy="{{selec_type}}">
+                    {{idx}}
+                </view>
+            </block>
+        </view>
+    </view>
+    <view class="bg {{isfull ?'fullbg blk':'zbg'}}"  data-nav="0" bindtap="showList"></view>
+
+
+    <view style="margin-top:155rpx">
+        <view class="house_list" style="margin: 10rpx 0;">
+            <block wx:for="{{show_Data}}" wx:for-index="idx" wx:for-item="item">
+                <view style="margin-top: 10rpx;background-color: #fff;padding:15rpx 0">
+                    <view class="dsp_flex">
+                        <view class="dsp_flex flex_cell_3 txt_center"><image class="m_a middle" style="width:180rpx;height:135rpx" src="{{item.pic}}"></image></view>
+                        <view class="flex_cell_7">
+                            <view class="list_title dsp_flex">
+                                <view class="flex_cell_7">{{item.title}}</view>
+                                <view class="txt_center flex_cell_4" style="color:#ff552e;">{{item.price}}<text>元/{{item.unit == 0 ? '日' : (item.unit == 1 ? '月' : (item.unit == 2 ? '季度' : '年'))}}</text></view>
+                            </view>
+                            <view class="" style="padding: 5rpx 20rpx;">
+                                <view>{{item.rent_type == 0 ? (item.room_type == 0 ? '主卧' : '次卧' ) : '整租'}}（{{item.room_account}}室）  {{item.squre}}m<text class="sup">2</text></view>
+                                <view>{{item.location.area}} {{item.location.other}}</view>
+                                <view><text class="iconfont icon-location">
+                                </text> {{item.distance.num}}{{item.distance.unit}}</view>
+                            </view>
+                        </view>
+                    </view>
+                </view>
+            </block>
+        </view>
+    </view>
+
+</view>

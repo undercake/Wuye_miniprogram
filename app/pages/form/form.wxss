@@ -1,0 +1,46 @@
+form{
+	font-size: 30rpx;
+	margin-top: 30rpx;
+}
+
+input, textarea{
+	width: 80%;
+}
+
+.devide{
+	background: #fff;
+	margin-top: 10rpx;
+}
+
+.label{
+	line-height: 115rpx;
+}
+
+.blk{
+	width: 100%;
+	height: 100rpx;
+	background: #fff;
+	padding-bottom: 44rpx;
+}
+
+.cell{
+	width: 115rpx;
+	height: 115rpx;
+	background: #ececec;
+	margin-left: 30rpx;
+}
+
+.cell text{
+	text-align: center;
+	color: #fff;
+	font-size: 70rpx;
+}
+
+.submit{
+	background: #05509d;
+	color: #fff;
+	border-radius: 7rpx;
+	width: 95%;
+	height: 68rpx;
+	font-size: 30rpx;
+}

@@ -1,0 +1,34 @@
+<!--pages/around/around.wxml-->
+<map id="map" longitude="{{appData.UserLocation.longitude}}" latitude="{{appData.UserLocation.latitude}}" scale="14" show-location enable-zoom enable-scroll style="width: 100%; height: 400rpx;"></map>
+<view id="show_cont" class="container">
+    <view id="cont_title" class="dsp_flex middle txt_center titleItem">
+        <block wx:for="{{show_List}}" wx:for-index="idx" wx:for-item="item">
+            <view data-idx="{{idx}}" bindtap="changeItem" class="flex_cell_1 listTitle {{selected == idx ? 'selected' : ''}} middle">
+                <text>{{item.title}}</text>
+            </view>
+        </block>
+    </view>
+    <swiper bindchange="changeItem" style="height: {{scrollViewHeight}}px" class="show" current="{{selected}}">
+        <block wx:for="{{show_List}}" wx:for-item="item">
+            <swiper-item>
+                <scroll-view scroll-y="{{true}}" bindscrolltolower="scrolltolower" style="height: {{scrollViewHeight}}px;margin-top: 10rpx;background-color: #fff;padding:15rpx 0">
+                    <view>
+                        <block wx:for="{{item.contant}}" wx:for-index="idx" wx:for-item="itm">
+                            <navigator url="/pages/detail/detail?from=around&type={{itm.type}}&detail={{item.id}}" class="listitem dsp_flex">
+                                <view class="dsp_flex flex_cell_3 txt_center">
+                                    <image class="m_a middle" style="width:180rpx;height:135rpx" src="{{itm.pic}}"></image>
+                                </view>
+                                <view class="flex_cell_7">
+                                    <view class="list_title dsp_flex">
+                                        <view class="flex_cell_7">{{itm.title}}</view>
+                                        <view class="txt_center flex_cell_4">人均消费：{{itm.price}}<text></text></view>
+                                    </view>
+                                </view>
+                            </navigator>
+                        </block>
+                    </view>
+                </scroll-view>
+            </swiper-item>
+        </block>
+    </swiper>
+</view>
