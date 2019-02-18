@@ -57,3 +57,7 @@ image.massage{
 .txt_swip{
   height: 100%;
 }
+
+navigator.item{
+    border-bottom:2rpx solid #ececec;
+}

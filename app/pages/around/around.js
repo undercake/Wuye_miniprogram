@@ -9,252 +9,11 @@ Page({
         appData: app.globalData,
         selected: 0,
         scrollViewHeight: 200,
-        show_List: [{
-                'title': '全部',
-                'contant': [{
-                        'price': 200,
-                        'type':0,
-                        'pic': 'http://192.168.31.158:8888/miniapp/wuye/1.png',
-                        'title': '某酒店',
-                        'id':0,
-                        'position': {
-                            'longitude': 0,
-                            'latitude': 0,
-                            'distance': 0
-                        },
-                    },
-                    {
-                        'price': 200,
-                        'pic': 'http://192.168.31.158:8888/miniapp/wuye/1.png',
-                        'title': '某酒店',
-                        'id':0,
-                        'position': {
-                            'longitude': 0,
-                            'latitude': 0,
-                            'distance': 0
-                        },
-                    },
-                    {
-                        'price': 200,
-                        'pic': 'http://192.168.31.158:8888/miniapp/wuye/1.png',
-                        'title': '某酒店',
-                        'id':0,
-                        'position': {
-                            'longitude': 0,
-                            'latitude': 0,
-                            'distance': 0
-                        },
-                    },
-                ]
-            },
-            {
-                'title': '酒店',
-                'type':1,
-                'contant': [{
-                        'price': 200,
-                        'pic': 'http://192.168.31.158:8888/miniapp/wuye/1.png',
-                        'title': '某酒店',
-                        'id':0,
-                        'position': {
-                            'longitude': 0,
-                            'latitude': 0,
-                            'distance': 0
-                        },
-                    },
-                    {
-                        'price': 200,
-                        'pic': 'http://192.168.31.158:8888/miniapp/wuye/1.png',
-                        'title': '某酒店',
-                        'id':0,
-                        'position': {
-                            'longitude': 0,
-                            'latitude': 0,
-                            'distance': 0
-                        },
-                    },
-                    {
-                        'price': 200,
-                        'pic': 'http://192.168.31.158:8888/miniapp/wuye/1.png',
-                        'title': '某酒店',
-                        'id':0,
-                        'position': {
-                            'longitude': 0,
-                            'latitude': 0,
-                            'distance': 0
-                        },
-                    },
-                ]
-            },
-            {
-                'title': '美食',
-                'type':2,
-                'contant': [{
-                        'price': 200,
-                        'pic': 'http://192.168.31.158:8888/miniapp/wuye/1.png',
-                        'title': '某酒店',
-                        'id':0,
-                        'position': {
-                            'longitude': 0,
-                            'latitude': 0,
-                            'distance': 0
-                        },
-                    },
-                    {
-                        'price': 200,
-                        'pic': 'http://192.168.31.158:8888/miniapp/wuye/1.png',
-                        'title': '某酒店',
-                        'id':0,
-                        'position': {
-                            'longitude': 0,
-                            'latitude': 0,
-                            'distance': 0
-                        },
-                    },
-                    {
-                        'price': 200,
-                        'pic': 'http://192.168.31.158:8888/miniapp/wuye/1.png',
-                        'title': '某酒店',
-                        'id':0,
-                        'position': {
-                            'longitude': 0,
-                            'latitude': 0,
-                            'distance': 0
-                        },
-                    },
-                ]
-            },
-            {
-                'title': '娱乐',
-                'type':3,
-                'contant': [{
-                        'price': 200,
-                        'pic': 'http://192.168.31.158:8888/miniapp/wuye/1.png',
-                        'title': '某酒店',
-                        'id':0,
-                        'position': {
-                            'longitude': 0,
-                            'latitude': 0,
-                            'distance': 0
-                        },
-                    },
-                    {
-                        'price': 200,
-                        'pic': 'http://192.168.31.158:8888/miniapp/wuye/1.png',
-                        'title': '某酒店',
-                        'id':0,
-                        'position': {
-                            'longitude': 0,
-                            'latitude': 0,
-                            'distance': 0
-                        },
-                    },
-                    {
-                        'price': 200,
-                        'pic': 'http://192.168.31.158:8888/miniapp/wuye/1.png',
-                        'title': '某酒店',
-                        'id':0,
-                        'position': {
-                            'longitude': 0,
-                            'latitude': 0,
-                            'distance': 0
-                        },
-                    },
-                    {
-                        'price': 200,
-                        'pic': 'http://192.168.31.158:8888/miniapp/wuye/1.png',
-                        'title': '某酒店',
-                        'id':0,
-                        'position': {
-                            'longitude': 0,
-                            'latitude': 0,
-                            'distance': 0
-                        },
-                    },
-                    {
-                        'price': 200,
-                        'pic': 'http://192.168.31.158:8888/miniapp/wuye/1.png',
-                        'title': '某酒店',
-                        'id':0,
-                        'position': {
-                            'longitude': 0,
-                            'latitude': 0,
-                            'distance': 0
-                        },
-                    },
-                    {
-                        'price': 200,
-                        'pic': 'http://192.168.31.158:8888/miniapp/wuye/1.png',
-                        'title': '某酒店',
-                        'id':0,
-                        'position': {
-                            'longitude': 0,
-                            'latitude': 0,
-                            'distance': 0
-                        },
-                    },
-                    {
-                        'price': 200,
-                        'pic': 'http://192.168.31.158:8888/miniapp/wuye/1.png',
-                        'title': '某酒店',
-                        'id':0,
-                        'position': {
-                            'longitude': 0,
-                            'latitude': 0,
-                            'distance': 0
-                        },
-                    },
-                    {
-                        'price': 200,
-                        'pic': 'http://192.168.31.158:8888/miniapp/wuye/1.png',
-                        'title': '某酒店',
-                        'id':0,
-                        'position': {
-                            'longitude': 0,
-                            'latitude': 0,
-                            'distance': 0
-                        },
-                    },
-                ]
-            },
-            {
-                'title': '服务',
-                'type':4,
-                'contant': [{
-                        'price': 200,
-                        'pic': 'http://192.168.31.158:8888/miniapp/wuye/1.png',
-                        'title': '某酒店',
-                        'id':0,
-                        'position': {
-                            'longitude': 0,
-                            'latitude': 0,
-                            'distance': 0
-                        },
-                    },
-                    {
-                        'price': 200,
-                        'pic': 'http://192.168.31.158:8888/miniapp/wuye/1.png',
-                        'title': '某酒店',
-                        'id':0,
-                        'position': {
-                            'longitude': 0,
-                            'latitude': 0,
-                            'distance': 0
-                        },
-                    },
-                    {
-                        'price': 200,
-                        'pic': 'http://192.168.31.158:8888/miniapp/wuye/1.png',
-                        'title': '某酒店',
-                        'id':0,
-                        'position': {
-                            'longitude': 0,
-                            'latitude': 0,
-                            'distance': 0
-                        },
-                    },
-                ]
-            },
-        ],
+        show_List: {},
+        lastTime: 0,
+        lastSelect: 0,
+        isload: false,
+        loadfail: 'none'
     },
 
     /**
@@ -262,25 +21,76 @@ Page({
      */
     onLoad: function(options) {
         app.getLocation_(this);
+        this.getData();
+    },
 
+
+
+    getData: function(data = {}) {
+        wx.showToast({
+            title: '加载中...',
+            icon: 'loading',
+            duration: 2000000
+        });
+        let that = this;
+        app.request(that, app.globalData.baseURI + 'around', 'GET', data);
+    },
+
+    backData: function(e) {
+        console.log(e);
+
+        if (e == 'null') {
+            if (e == 'null') {
+                wx.hideToast();
+                this.setData({
+                    loadfail: 'block'
+                });
+                app.show_notice('数据跑火星去了，请稍候再试');
+                return;
+            }
+            wx.hideToast();
+            return;
+        }
+
+        this.setData({
+            selected_data: {},
+            isload: true
+        });
+
+        let that = this;
+        let data = [{
+            'title': '全部',
+            'contant': []
+        }];
+        e.data.data.forEach(
+            (em, i) => {
+                data[0].contant = data[0].contant.concat(em.contant);
+            }
+        );
+
+        console.log(e.data.data);
+        data = data.concat(e.data.data);
+        console.log(data);
+
+        this.setData({
+            show_List: data
+        });
+        wx.hideToast();
+
+        wx.stopPullDownRefresh();
+        // that.setdistance();
     },
 
     /**
      * 生命周期函数--监听页面初次渲染完成
      */
     onReady: function() {
-        let maxHeight
+        let maxHeight;
         wx.getSystemInfo({
             success(res) {
-                maxHeight = res.windowHeight
-                // console.log(res.model)
-                // console.log(res.pixelRatio)
-                // console.log(res.windowWidth)
-                // console.log(res.language)
-                // console.log(res.version)
-                // console.log(res.platform)
+                maxHeight = res.windowHeight;
             }
-        })
+        });
         let height = maxHeight;
         // 然后取出navbar和header的高度
         // 根据文档，先创建一个SelectorQuery对象实例
@@ -292,9 +102,9 @@ Page({
         query.select('#cont_title').boundingClientRect();
 
         // 执行上面所指定的请求，结果会按照顺序存放于一个数组中，在callback的第一个参数中返回
-        let that = this
+        let that = this;
         query.exec((res) => {
-            let rate = res[0].height / 400
+            let rate = res[0].height / 400;
             height = maxHeight - res[1].bottom - 20 * rate;
             console.log(res);
             that.setData({
@@ -310,14 +120,24 @@ Page({
     },
 
     changeItem: function(e) {
+        let lst = this.data.lastSelect;
+        if (this.data.lastTime != 0 && Math.abs(this.data.lastTime - e.timeStamp) < 301) {
+            this.setData({
+                selected: lst
+            });
+            return;
+        }
         console.log(e);
         if (e.type == 'tap') {
             this.setData({
-                selected: e.currentTarget.dataset.idx
+                selected: e.currentTarget.dataset.idx,
+                lst: e.currentTarget.dataset.idx
             });
         } else if (e.type == 'change') {
             this.setData({
-                selected: e.detail.current
+                selected: e.detail.current,
+                lst: e.detail.current,
+                lastTime: e.timeStamp
             });
         }
     },
@@ -325,12 +145,52 @@ Page({
     datachange: function() {
         var mapCtx = wx.createMapContext('map');
         mapCtx.moveToLocation();
-        // console.log(getApp());
-        // let a = getApp();
-        // let that = this
-        // console.log(a);
-        // setTimeout(()=>that.setData({appData:a.globalData}),3000);
     },
+
+
+    getDistance: function(lat1, lng1, lat2, lng2) {
+        lat1 = lat1 || 0;
+        lng1 = lng1 || 0;
+        lat2 = lat2 || 0;
+        lng2 = lng2 || 0;
+
+        var rad1 = lat1 * Math.PI / 180.0;
+        var rad2 = lat2 * Math.PI / 180.0;
+        var a = rad1 - rad2;
+        var b = lng1 * Math.PI / 180.0 - lng2 * Math.PI / 180.0;
+
+        var r = 6378137; //地球半径
+        var distance = r * 2 * Math.asin(Math.sqrt(Math.pow(Math.sin(a / 2), 2) + Math.cos(rad1) * Math.cos(rad2) * Math.pow(Math.sin(b / 2), 2)));
+
+
+        this.setData({
+            distence: distance
+        });
+    },
+    setdistance: function() {
+        let that = this;
+        let data = [];
+        app.globalData.UserLocation = {
+            'longitude': that.data.local.longitude,
+            'latitude': that.data.local.latitude,
+            'status': true
+        };
+        let local = (that.data.local.latitude == 0 && that.data.local.longitude == 0);
+        that.data.selected_data.forEach(function(element, index) {
+            that.getDistance(that.data.local.latitude, that.data.local.longitude, element.location.latitude, element.location.longitude);
+            let long = parseInt(that.data.distence);
+            data[index] = element;
+            data[index].distance.num = local ? '未知' : (long > 1000 ? (long / 1000).toFixed(1) : long);
+            data[index].distance.unit = local ? '距离' : ((long >= 1000) ? 'km' : 'm');
+        });
+        this.setData({
+            show_Data: data,
+            selected_data: data
+        });
+        console.log(that.data.show_Data);
+    },
+
+    sortByDistance: function() {},
 
     /**
      * 生命周期函数--监听页面显示
@@ -356,8 +216,12 @@ Page({
     /**
      * 页面相关事件处理函数--监听用户下拉动作
      */
-    onPullDownRefresh: function() {
+    fresh: function() {
+        wx.startPullDownRefresh();
+    },
 
+    onPullDownRefresh: function() {
+        this.getData();
     },
 
     /**
@@ -373,4 +237,4 @@ Page({
     onShareAppMessage: function() {
 
     }
-})
+});

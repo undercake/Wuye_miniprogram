@@ -1,17 +1,19 @@
 <!--pages/around/around.wxml-->
+<view style="display:{{isload ? 'block' : 'none' }};">
+
 <map id="map" longitude="{{appData.UserLocation.longitude}}" latitude="{{appData.UserLocation.latitude}}" scale="14" show-location enable-zoom enable-scroll style="width: 100%; height: 400rpx;"></map>
 <view id="show_cont" class="container">
-    <view id="cont_title" class="dsp_flex middle txt_center titleItem">
+    <scroll-view scroll-with-animation scroll-into-view="view{{selected}}" scroll-x="{{true}}" id="cont_title" class="dsp_flex middle txt_center titleItem">
         <block wx:for="{{show_List}}" wx:for-index="idx" wx:for-item="item">
-            <view data-idx="{{idx}}" bindtap="changeItem" class="flex_cell_1 listTitle {{selected == idx ? 'selected' : ''}} middle">
+            <view id="view{{idx}}" data-idx="{{idx}}" bindtap="changeItem" class="flex_cell_1 listTitle {{selected == idx ? 'selected' : ''}} middle">
                 <text>{{item.title}}</text>
             </view>
         </block>
-    </view>
+    </scroll-view>
     <swiper bindchange="changeItem" style="height: {{scrollViewHeight}}px" class="show" current="{{selected}}">
         <block wx:for="{{show_List}}" wx:for-item="item">
             <swiper-item>
-                <scroll-view scroll-y="{{true}}" bindscrolltolower="scrolltolower" style="height: {{scrollViewHeight}}px;margin-top: 10rpx;background-color: #fff;padding:15rpx 0">
+                <scroll-view enable-back-to-top scroll-y="{{true}}" bindscrolltolower="scrolltolower" style="height: {{scrollViewHeight}}px;margin-top: 10rpx;background-color: #fff;padding:15rpx 0">
                     <view>
                         <block wx:for="{{item.contant}}" wx:for-index="idx" wx:for-item="itm">
                             <navigator url="/pages/detail/detail?from=around&type={{itm.type}}&detail={{item.id}}" class="listitem dsp_flex">
@@ -31,4 +33,14 @@
             </swiper-item>
         </block>
     </swiper>
+</view>
+
+<movable-area class="refreshable" style="height: {{scrollViewHeight/2}}px;">
+    <movable-view direction="all" out-of-bounds x="" y="{{scrollViewHeight/4}}" class="refresh txt_center iconfont icon-reload" bindtap="fresh">
+    </movable-view>
+</movable-area>
+</view>
+
+<view style="display:{{isload ? 'none' : loadfail }};font-size:30rpx;color:#666;text-align:center;padding:100rpx 0;">
+    数据加载错误，请下拉重试
 </view>

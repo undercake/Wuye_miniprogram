@@ -2,77 +2,87 @@
 var app = getApp();
 Page({
 
-  /**
-   * 页面的初始数据
-   */
-  data: {
-      appData:app.globalData,
-      loading:false
-  },
+    /**
+     * 页面的初始数据
+     */
+    data: {
+        isLogin: false,
+        loading: false,
+        userData:''
+    },
 
-  /**
-   * 生命周期函数--监听页面加载
-   */
-  onLoad: function (options) {
+    /**
+     * 生命周期函数--监听页面加载
+     */
+    onLoad: function(options) {
+        this.bindGetUserInfo();
+    },
 
-  },
+    bindGetUserInfo: function() {
+        app.UserLogin(this);
+        this.setData({
+            loading: true
+        });
+    },
 
-  bindGetUserInfo: function(){
-      this.setData({loading:true});
-      app.UserLogin(this);
-  },
+    datachange: function(e) {
+        if(e == 'null'){
+            this.setData({loading: false});
+            return;
+        }
+        console.log(e);
+        this.setData({
+            isLogin:true,
+            userData: e
+        });
+    },
 
-  datachange:function () {
-      let a = getApp();
-      this.setData({appData:a.globalData});
-  },
+    /**
+     * 生命周期函数--监听页面初次渲染完成
+     */
+    onReady: function() {
 
-  /**
-   * 生命周期函数--监听页面初次渲染完成
-   */
-  onReady: function () {
+    },
 
-  },
+    /**
+     * 生命周期函数--监听页面显示
+     */
+    onShow: function() {
 
-  /**
-   * 生命周期函数--监听页面显示
-   */
-  onShow: function () {
+    },
 
-  },
+    /**
+     * 生命周期函数--监听页面隐藏
+     */
+    onHide: function() {
 
-  /**
-   * 生命周期函数--监听页面隐藏
-   */
-  onHide: function () {
+    },
 
-  },
+    /**
+     * 生命周期函数--监听页面卸载
+     */
+    onUnload: function() {
 
-  /**
-   * 生命周期函数--监听页面卸载
-   */
-  onUnload: function () {
+    },
 
-  },
+    /**
+     * 页面相关事件处理函数--监听用户下拉动作
+     */
+    onPullDownRefresh: function() {
+        wx.stopPullDownRefresh();
+    },
 
-  /**
-   * 页面相关事件处理函数--监听用户下拉动作
-   */
-  onPullDownRefresh: function () {
+    /**
+     * 页面上拉触底事件的处理函数
+     */
+    onReachBottom: function() {
 
-  },
+    },
 
-  /**
-   * 页面上拉触底事件的处理函数
-   */
-  onReachBottom: function () {
+    /**
+     * 用户点击右上角分享
+     */
+    onShareAppMessage: function() {
 
-  },
-
-  /**
-   * 用户点击右上角分享
-   */
-  onShareAppMessage: function () {
-
-  }
-})
+    }
+});

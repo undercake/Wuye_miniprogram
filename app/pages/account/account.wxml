@@ -1,10 +1,10 @@
 <!--pages/account/account.wxml-->
 <view class="header dsp_flex flex_col middle">
-    <image class="middle avata" src="{{appData.loginData.userInfo.avatarUrl}}"></image>
-    <view class="txt_center">{{appData.isLogin ? appData.loginData.userInfo.nickName: '请登录'}}</view>
+    <image class="middle avata" src="{{userData.userInfo.avatarUrl}}"></image>
+    <view class="txt_center">{{isLogin ? userData.userInfo.nickName: '请登录'}}</view>
 </view>
 
-<view class="{{appData.isLogin ? '' : 'hide'}}">
+<view class="{{isLogin ? '' : 'hide'}}">
     <navigator url="/pages/detail/detail?from=account&detail=myaccount" class="item dsp_flex">
         <view class="icon flex_cell_1">
             <view class="iconfont icon-home"></view>
@@ -41,7 +41,7 @@
         <view class="detail iconfont flex_cell_1 icon-right"></view>
     </navigator>
 </view>
-<view class="{{appData.isLogin ? 'hide' : ''}}">
+<view class="{{isLogin ? 'hide' : ''}}">
     <view class="item">
         <button class="login" loading="{{loading}}" open-type="getUserInfo" bindgetuserinfo="bindGetUserInfo">
             登录

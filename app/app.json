@@ -8,14 +8,18 @@
     "pages/news/news",
     "pages/manage/manage",
     "pages/faq/faq",
+    "pages/form/form",
     "pages/massage/massage",
-    "pages/detail/detail"
+    "pages/detail/detail",
+    "pages/news/detail"
   ],
   "window": {
+    "enablePullDownRefresh": true,
     "backgroundTextStyle": "light",
     "navigationBarBackgroundColor": "#05509d",
     "navigationBarTitleText": "WeChat",
-    "navigationBarTextStyle": "#fff"
+    "navigationBarTextStyle": "white",
+    "onReachBottomDistance": 0
   },
   "tabBar": {
     "color": "#999",
@@ -58,5 +62,8 @@
     "scope.userLocation": {
       "desc": "你的位置信息将用于确定你所在的小区"
     }
+  },
+  "networkTimeout": {
+    "request": 20000
   }
 }

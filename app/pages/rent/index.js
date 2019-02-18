@@ -7,6 +7,7 @@ Page({
         qyopen: false,
         content_open: false,
         isfull: false,
+        loadfail: 'none',
         location: "地区",
         sort_type: {
             'current': "排序",
@@ -51,819 +52,7 @@ Page({
             'longitude': 0,
             'res': {}
         },
-        fullData: {
-            'commit': {
-                "location": {
-                    'province': '所在省',
-                    'city': '所在市',
-                    'area': "所在区",
-                    'other': '具体地址',
-                    'latitude': '经度',
-                    'longitude': '纬度'
-                },
-                'pic': '首图地址',
-                "squre": '租住面积',
-                "room_account": '房间数',
-                "rent_type": '租住类型0合租1整租',
-                "price": '价格',
-                "room_type": '租房类型:0主卧1次卧',
-                "unit": '单位：0元每天1元每月2元每季度3元每年',
-                'title': '租贴标题'
-            },
-            'cont': [{
-                    "location": {
-                        'province': '天津市',
-                        'city': '天津市',
-                        'area': "和平区",
-                        'other': '风华里小区',
-                        'longitude': 117.157732,
-                        'latitude': 39.098774
-                    },
-                    'pic': 'http://127.0.0.1:8888/miniapp/wuye/1.png',
-                    "squre": 30,
-                    "room_account": 1,
-                    "rent_type": 0,
-                    "price": 2280,
-                    'distance': {
-                        'num': 0,
-                        'unit': 'm'
-                    },
-                    "room_type": 0,
-                    "unit": 1,
-                    'title': '3号线 华苑 大阳台 阳面 精装 龤中介 全包 直租'
-                },
-                {
-                    "location": {
-                        'province': '天津市',
-                        'city': '天津市',
-                        'area': "和平区",
-                        'other': '风华里小区',
-                        'longitude': 117.159456,
-                        'latitude': 39.086775
-                    },
-                    'pic': 'http://127.0.0.1:8888/miniapp/wuye/1.png',
-                    "squre": 40,
-                    "room_account": 2,
-                    "rent_type": 0,
-                    "price": 4280,
-                    'distance': {
-                        'num': 0,
-                        'unit': 'm'
-                    },
-                    "room_type": 1,
-                    "unit": 1,
-                    'title': '3号线 华苑 大阳台 阳面 精装 龤中介 全包 直租'
-                },
-                {
-                    "location": {
-                        'province': '天津市',
-                        'city': '天津市',
-                        'area': "和平区",
-                        'other': '风华里小区',
-                        'longitude': 117.322527,
-                        'latitude': 39.401202
-                    },
-                    'pic': 'http://127.0.0.1:8888/miniapp/wuye/1.png',
-                    "squre": 14,
-                    "room_account": 3,
-                    "rent_type": 0,
-                    "price": 1177,
-                    'distance': {
-                        'num': 0,
-                        'unit': 'm'
-                    },
-                    "room_type": 0,
-                    "unit": 1,
-                    'title': '3号线 华苑 大阳台 阳面 精装 龤中介 全包 直租'
-                },
-                {
-                    "location": {
-                        'province': '天津市',
-                        'city': '天津市',
-                        'area': "和平区",
-                        'other': '风华里小区',
-                        'longitude': 117.10432632,
-                        'latitude': 39.31222
-                    },
-                    'pic': 'http://127.0.0.1:8888/miniapp/wuye/1.png',
-                    "squre": 25,
-                    "room_account": 4,
-                    "rent_type": 0,
-                    "price": 1090,
-                    'distance': {
-                        'num': 0,
-                        'unit': 'm'
-                    },
-                    "room_type": 1,
-                    "unit": 1,
-                    'title': '3号线 华苑 大阳台 阳面 精装 龤中介 全包 直租'
-                },
-                {
-                    "location": {
-                        'province': '天津市',
-                        'city': '天津市',
-                        'area': "和平区",
-                        'other': '风华里小区',
-                        'longitude': 117.2013223,
-                        'latitude': 39.1019313
-                    },
-                    'pic': 'http://127.0.0.1:8888/miniapp/wuye/1.png',
-                    "squre": 32,
-                    "room_account": 1,
-                    "rent_type": 0,
-                    "price": 990,
-                    'distance': {
-                        'num': 0,
-                        'unit': 'm'
-                    },
-                    "room_type": 0,
-                    "unit": 1,
-                    'title': '3号线 华苑 大阳台 阳面 精装 龤中介 全包 直租'
-                },
-                {
-                    "location": {
-                        'province': '天津市',
-                        'city': '天津市',
-                        'area': "河东区",
-                        'other': '风华里小区',
-                        'longitude': 117.1320432,
-                        'latitude': 39.3122
-                    },
-                    'pic': 'http://127.0.0.1:8888/miniapp/wuye/1.png',
-                    "squre": 13,
-                    "room_account": 2,
-                    "rent_type": 0,
-                    "price": 2300,
-                    'distance': {
-                        'num': 0,
-                        'unit': 'm'
-                    },
-                    "room_type": 1,
-                    "unit": 1,
-                    'title': '3号线 华苑 大阳台 阳面 精装 龤中介 全包 直租'
-                },
-                {
-                    "location": {
-                        'province': '天津市',
-                        'city': '天津市',
-                        'area': "河东区",
-                        'other': '风华里小区',
-                        'longitude': 117.2132123,
-                        'latitude': 39.10110123
-                    },
-                    'pic': 'http://127.0.0.1:8888/miniapp/wuye/1.png',
-                    "squre": 65,
-                    "room_account": 3,
-                    "rent_type": 0,
-                    "price": 3120,
-                    'distance': {
-                        'num': 0,
-                        'unit': 'm'
-                    },
-                    "room_type": 0,
-                    "unit": 1,
-                    'title': '3号线 华苑 大阳台 阳面 精装 龤中介 全包 直租'
-                },
-                {
-                    "location": {
-                        'province': '天津市',
-                        'city': '天津市',
-                        'area': "河东区",
-                        'other': '风华里小区',
-                        'longitude': 117.104232332,
-                        'latitude': 39.31022
-                    },
-                    'pic': 'http://127.0.0.1:8888/miniapp/wuye/1.png',
-                    "squre": 34,
-                    "room_account": 5,
-                    "rent_type": 0,
-                    "price": 1180,
-                    'distance': {
-                        'num': 0,
-                        'unit': 'm'
-                    },
-                    "room_type": 1,
-                    "unit": 1,
-                    'title': '3号线 华苑 大阳台 阳面 精装 龤中介 全包 直租'
-                },
-                {
-                    "location": {
-                        'province': '天津市',
-                        'city': '天津市',
-                        'area': "河东区",
-                        'other': '风华里小区',
-                        'longitude': 117.13219723,
-                        'latitude': 39.1212313
-                    },
-                    'pic': 'http://127.0.0.1:8888/miniapp/wuye/1.png',
-                    "squre": 43,
-                    "room_account": 4,
-                    "rent_type": 0,
-                    "price": 230,
-                    'distance': {
-                        'num': 0,
-                        'unit': 'm'
-                    },
-                    "room_type": 0,
-                    "unit": 1,
-                    'title': '3号线 华苑 大阳台 阳面 精装 龤中介 全包 直租'
-                },
-                {
-                    "location": {
-                        'province': '天津市',
-                        'city': '天津市',
-                        'area': "河西区",
-                        'other': '12里小区',
-                        'longitude': 117.3212527,
-                        'latitude': 39.432322
-                    },
-                    'pic': 'http://127.0.0.1:8888/miniapp/wuye/1.png',
-                    "squre": 32,
-                    "room_account": 1,
-                    "rent_type": 1,
-                    "price": 2205,
-                    'distance': {
-                        'num': 0,
-                        'unit': 'm'
-                    },
-                    "room_type": 0,
-                    "unit": 1,
-                    'title': '3号线 华苑 大阳台 阳面 精装 龤中介 全包 直租'
-                },
-                {
-                    "location": {
-                        'province': '天津市',
-                        'city': '天津市',
-                        'area': "河西区",
-                        'other': '12里小区',
-                        'longitude': 117.10462332,
-                        'latitude': 39.3112232
-                    },
-                    'pic': 'http://127.0.0.1:8888/miniapp/wuye/1.png',
-                    "squre": 23,
-                    "room_account": 2,
-                    "rent_type": 0,
-                    "price": 980,
-                    'distance': {
-                        'num': 0,
-                        'unit': 'm'
-                    },
-                    "room_type": 0,
-                    "unit": 1,
-                    'title': '3号线 华苑 大阳台 阳面 精装 龤中介 全包 直租'
-                },
-                {
-                    "location": {
-                        'province': '天津市',
-                        'city': '天津市',
-                        'area': "河西区",
-                        'other': '12里小区',
-                        'longitude': 117.2129723,
-                        'latitude': 39.01213
-                    },
-                    'pic': 'http://127.0.0.1:8888/miniapp/wuye/1.png',
-                    "squre": 31,
-                    "room_account": 2,
-                    "rent_type": 0,
-                    "price": 1220,
-                    'distance': {
-                        'num': 0,
-                        'unit': 'm'
-                    },
-                    "room_type": 1,
-                    "unit": 1,
-                    'title': ' 青春汇 - 青春汇中北镇店1组'
-                },
-                {
-                    "location": {
-                        'province': '天津市',
-                        'city': '天津市',
-                        'area': "河西区",
-                        'other': '12里小区',
-                        'longitude': 117.153227,
-                        'latitude': 39.0123320123
-                    },
-                    'pic': 'http://127.0.0.1:8888/miniapp/wuye/1.png',
-                    "squre": 13,
-                    "room_account": 1,
-                    "rent_type": 0,
-                    "price": 2240,
-                    'distance': {
-                        'num': 0,
-                        'unit': 'm'
-                    },
-                    "room_type": 0,
-                    "unit": 1,
-                    'title': '3号线 华苑 大阳台 阳面 精装 龤中介 全包 直租'
-                },
-                {
-                    "location": {
-                        'province': '天津市',
-                        'city': '天津市',
-                        'area': "河西区",
-                        'other': '12里小区',
-                        'longitude': 117.104612332,
-                        'latitude': 39.301232
-                    },
-                    'pic': 'http://127.0.0.1:8888/miniapp/wuye/1.png',
-                    "squre": 54,
-                    "room_account": 3,
-                    "rent_type": 0,
-                    "price": 1200,
-                    'distance': {
-                        'num': 0,
-                        'unit': 'm'
-                    },
-                    "room_type": 0,
-                    "unit": 1,
-                    'title': '3号线 华苑 大阳台 阳面 精装 龤中介 全包 直租'
-                },
-                {
-                    "location": {
-                        'province': '天津市',
-                        'city': '天津市',
-                        'area': "南开区",
-                        'other': '风小区',
-                        'longitude': 117.211329723,
-                        'latitude': 39.1322313
-                    },
-                    'pic': 'http://127.0.0.1:8888/miniapp/wuye/1.png',
-                    "squre": 45,
-                    "room_account": 2,
-                    "rent_type": 0,
-                    "price": 1400,
-                    'distance': {
-                        'num': 0,
-                        'unit': 'm'
-                    },
-                    "room_type": 1,
-                    "unit": 1,
-                    'title': '青春汇 - 青春汇中北镇店1组'
-                },
-                {
-                    "location": {
-                        'province': '天津市',
-                        'city': '天津市',
-                        'area': "南开区",
-                        'other': '风小区',
-                        'longitude': 117.3322527,
-                        'latitude': 39.4212322
-                    },
-                    'pic': 'http://127.0.0.1:8888/miniapp/wuye/1.png',
-                    "squre": 50,
-                    "room_account": 1,
-                    "rent_type": 0,
-                    "price": 1250,
-                    'distance': {
-                        'num': 0,
-                        'unit': 'm'
-                    },
-                    "room_type": 0,
-                    "unit": 1,
-                    'title': '3号线 华苑 大阳台 阳面 精装 龤中介 全包 直租'
-                },
-                {
-                    "location": {
-                        'province': '天津市',
-                        'city': '天津市',
-                        'area': "南开区",
-                        'other': '风小区',
-                        'longitude': 117.1032322332,
-                        'latitude': 39.12322
-                    },
-                    'pic': 'http://127.0.0.1:8888/miniapp/wuye/1.png',
-                    "squre": 65,
-                    "room_account": 3,
-                    "rent_type": 0,
-                    "price": 2380,
-                    'distance': {
-                        'num': 0,
-                        'unit': 'm'
-                    },
-                    "room_type": 1,
-                    "unit": 1,
-                    'title': '青春汇 - 青春汇中北镇店1组'
-                },
-                {
-                    "location": {
-                        'province': '天津市',
-                        'city': '天津市',
-                        'area': "南开区",
-                        'other': '风小区',
-                        'longitude': 117.2119723,
-                        'latitude': 39.11213
-                    },
-                    'pic': 'http://127.0.0.1:8888/miniapp/wuye/1.png',
-                    "squre": 56,
-                    "room_account": 2,
-                    "rent_type": 0,
-                    "price": 1280,
-                    'distance': {
-                        'num': 0,
-                        'unit': 'm'
-                    },
-                    "room_type": 0,
-                    "unit": 1,
-                    'title': ' 临近曹庄地铁站，超市，生活交通便利，无中J费'
-                },
-                {
-                    "location": {
-                        'province': '天津市',
-                        'city': '天津市',
-                        'area': "南开区",
-                        'other': '风小区',
-                        'longitude': 117.1232527,
-                        'latitude': 39.4301232
-                    },
-                    'pic': 'http://127.0.0.1:8888/miniapp/wuye/1.png',
-                    "squre": 43,
-                    "room_account": 1,
-                    "rent_type": 1,
-                    "price": 4480,
-                    'distance': {
-                        'num': 0,
-                        'unit': 'm'
-                    },
-                    "room_type": 0,
-                    "unit": 1,
-                    'title': '紫梧桐公寓 - 紫梧桐公寓和平店1组'
-                },
-                {
-                    "location": {
-                        'province': '天津市',
-                        'city': '天津市',
-                        'area': "南开区",
-                        'other': '里小区',
-                        'longitude': 117.1046233232,
-                        'latitude': 39.123122
-                    },
-                    'pic': 'http://127.0.0.1:8888/miniapp/wuye/1.png',
-                    "squre": 43,
-                    "room_account": 3,
-                    "rent_type": 0,
-                    "price": 2280,
-                    'distance': {
-                        'num': 0,
-                        'unit': 'm'
-                    },
-                    "room_type": 0,
-                    "unit": 1,
-                    'title': '紫梧桐公寓 - 紫梧桐公寓和平店1组'
-                },
-                {
-                    "location": {
-                        'province': '天津市',
-                        'city': '天津市',
-                        'area': "南开区",
-                        'other': '里小区',
-                        'longitude': 117.211219723,
-                        'latitude': 39.0123213
-                    },
-                    'pic': 'http://127.0.0.1:8888/miniapp/wuye/1.png',
-                    "squre": 32,
-                    "room_account": 2,
-                    "rent_type": 0,
-                    "price": 4380,
-                    'distance': {
-                        'num': 0,
-                        'unit': 'm'
-                    },
-                    "room_type": 1,
-                    "unit": 2,
-                    'title': '治国里 中心北路菜市场楼上 卧室出租 可短租 出行 购物方便'
-                },
-                {
-                    "location": {
-                        'province': '天津市',
-                        'city': '天津市',
-                        'area': "河北区",
-                        'other': '里小区',
-                        'longitude': 117.3252327,
-                        'latitude': 39.012322
-                    },
-                    'pic': 'http://127.0.0.1:8888/miniapp/wuye/1.png',
-                    "squre": 21,
-                    "room_account": 2,
-                    "rent_type": 0,
-                    "price": 6320,
-                    'distance': {
-                        'num': 0,
-                        'unit': 'm'
-                    },
-                    "room_type": 0,
-                    "unit": 2,
-                    'title': '急租芳馨园  紧邻地铁 没有中J费 押一付一 家具家电全新'
-                },
-                {
-                    "location": {
-                        'province': '天津市',
-                        'city': '天津市',
-                        'area': "河北区",
-                        'other': '里小区',
-                        'longitude': 117.1032462332,
-                        'latitude': 39.312322
-                    },
-                    'pic': 'http://127.0.0.1:8888/miniapp/wuye/1.png',
-                    "squre": 23,
-                    "room_account": 1,
-                    "rent_type": 0,
-                    "price": 3340,
-                    'distance': {
-                        'num': 0,
-                        'unit': 'm'
-                    },
-                    "room_type": 0,
-                    "unit": 3,
-                    'title': '急租芳馨园  紧邻地铁 没有中J费 押一付一 家具家电全新'
-                },
-                {
-                    "location": {
-                        'province': '天津市',
-                        'city': '天津市',
-                        'area': "河北区",
-                        'other': '里小区',
-                        'longitude': 117.211973223,
-                        'latitude': 39.1212313
-                    },
-                    'pic': 'http://127.0.0.1:8888/miniapp/wuye/1.png',
-                    "squre": 34,
-                    "room_account": 3,
-                    "rent_type": 0,
-                    "price": 3230,
-                    'distance': {
-                        'num': 0,
-                        'unit': 'm'
-                    },
-                    "room_type": 0,
-                    "unit": 3,
-                    'title': '学府花园 南开 欧式装修干净卫生 24h宽带 随时带看'
-                },
-                {
-                    "location": {
-                        'province': '天津市',
-                        'city': '天津市',
-                        'area': "河北区",
-                        'other': '华小区',
-                        'longitude': 117.3232527,
-                        'latitude': 39.03301232
-                    },
-                    'pic': 'http://127.0.0.1:8888/miniapp/wuye/1.png',
-                    "squre": 45,
-                    "room_account": 2,
-                    "rent_type": 0,
-                    "price": 660,
-                    'distance': {
-                        'num': 0,
-                        'unit': 'm'
-                    },
-                    "room_type": 0,
-                    "unit": 2,
-                    'title': '3号线 华苑 大阳台 阳面 精装 龤中介 全包 直租'
-                },
-                {
-                    "location": {
-                        'province': '天津市',
-                        'city': '天津市',
-                        'area': "红桥区",
-                        'other': '华小区',
-                        'longitude': 117.1046232332,
-                        'latitude': 39013122
-                    },
-                    'pic': 'http://127.0.0.1:8888/miniapp/wuye/1.png',
-                    "squre": 56,
-                    "room_account": 1,
-                    "rent_type": 0,
-                    "price": 1230,
-                    'distance': {
-                        'num': 0,
-                        'unit': 'm'
-                    },
-                    "room_type": 0,
-                    "unit": 3,
-                    'title': '学府花园 南开 欧式装修干净卫生 24h宽带 随时带看'
-                },
-                {
-                    "location": {
-                        'province': '天津市',
-                        'city': '天津市',
-                        'area': "红桥区",
-                        'other': '华小区',
-                        'longitude': 117.213219723,
-                        'latitude': 39.11233
-                    },
-                    'pic': 'http://127.0.0.1:8888/miniapp/wuye/1.png',
-                    "squre": 67,
-                    "room_account": 3,
-                    "rent_type": 0,
-                    "price": 3210,
-                    'distance': {
-                        'num': 0,
-                        'unit': 'm'
-                    },
-                    "room_type": 0,
-                    "unit": 1,
-                    'title': '3号线 华苑 大阳台 阳面 精装 龤中介 全包 直租'
-                },
-                {
-                    "location": {
-                        'province': '天津市',
-                        'city': '天津市',
-                        'area': "红桥区",
-                        'other': '华小区',
-                        'longitude': 117.3253227,
-                        'latitude': 39.4012
-                    },
-                    'pic': 'http://127.0.0.1:8888/miniapp/wuye/1.png',
-                    "squre": 76,
-                    "room_account": 2,
-                    "rent_type": 0,
-                    "price": 4320,
-                    'distance': {
-                        'num': 0,
-                        'unit': 'm'
-                    },
-                    "room_type": 1,
-                    "unit": 1,
-                    'title': '3号线 华苑 大阳台 阳面 精装 龤中介 全包 直租'
-                },
-                {
-                    "location": {
-                        'province': '天津市',
-                        'city': '天津市',
-                        'area': "红桥区",
-                        'other': '华小区',
-                        'longitude': 117.1046322332,
-                        'latitude': 39.122322
-                    },
-                    'pic': 'http://127.0.0.1:8888/miniapp/wuye/1.png',
-                    "squre": 65,
-                    "room_account": 1,
-                    "rent_type": 0,
-                    "price": 2340,
-                    'distance': {
-                        'num': 0,
-                        'unit': 'm'
-                    },
-                    "room_type": 1,
-                    "unit": 1,
-                    'title': '急租芳馨园  紧邻地铁 没有中J费 押一付一 家具家电全新'
-                },
-                {
-                    "location": {
-                        'province': '天津市',
-                        'city': '天津市',
-                        'area': "塘沽区",
-                        'other': '98小区',
-                        'longitude': 117.21197232323,
-                        'latitude': 39.2112313
-                    },
-                    'pic': 'http://127.0.0.1:8888/miniapp/wuye/1.png',
-                    "squre": 64,
-                    "room_account": 3,
-                    "rent_type": 0,
-                    "price": 1530,
-                    'distance': {
-                        'num': 0,
-                        'unit': 'm'
-                    },
-                    "room_type": 0,
-                    "unit": 1,
-                    'title': '学府花园 南开 欧式装修干净卫生 24h宽带 随时带看'
-                },
-                {
-                    "location": {
-                        'province': '天津市',
-                        'city': '天津市',
-                        'area': "塘沽区",
-                        'other': '98小区',
-                        'longitude': 117.325297327,
-                        'latitude': 39.1232322
-                    },
-                    'pic': 'http://127.0.0.1:8888/miniapp/wuye/1.png',
-                    "squre": 46,
-                    "room_account": 2,
-                    "rent_type": 1,
-                    "price": 5420,
-                    'distance': {
-                        'num': 0,
-                        'unit': 'm'
-                    },
-                    "room_type": 1,
-                    "unit": 1,
-                    'title': '鸿正绿色家园 杭州道 包物业 包采暖 随时看房 可月付 短租'
-                },
-                {
-                    "location": {
-                        'province': '天津市',
-                        'city': '天津市',
-                        'area': "塘沽区",
-                        'other': '932小区',
-                        'longitude': 117.33225627,
-                        'latitude': 39.4012322
-                    },
-                    'pic': 'http://127.0.0.1:8888/miniapp/wuye/1.png',
-                    "squre": 53,
-                    "room_account": 1,
-                    "rent_type": 0,
-                    "price": 2280,
-                    'distance': {
-                        'num': 0,
-                        'unit': 'm'
-                    },
-                    "room_type": 0,
-                    "unit": 1,
-                    'title': '3号线 鸿正绿色家园 杭州道 包物业 包采暖 随时看房 可月付 短租'
-                },
-                {
-                    "location": {
-                        'province': '天津市',
-                        'city': '天津市',
-                        'area': "塘沽区",
-                        'other': '932小区',
-                        'longitude': 117.10463232,
-                        'latitude': 39.3101232
-                    },
-                    'pic': 'http://127.0.0.1:8888/miniapp/wuye/1.png',
-                    "squre": 35,
-                    "room_account": 3,
-                    "rent_type": 0,
-                    "price": 1180,
-                    'distance': {
-                        'num': 0,
-                        'unit': 'm'
-                    },
-                    "room_type": 1,
-                    "unit": 1,
-                    'title': '急租芳馨园  紧邻地铁 没有中J费 押一付一 家具家电全新'
-                },
-                {
-                    "location": {
-                        'province': '天津市',
-                        'city': '天津市',
-                        'area': "塘沽区",
-                        'other': '932小区',
-                        'longitude': 117.2113223,
-                        'latitude': 39.1012313
-                    },
-                    'pic': 'http://127.0.0.1:8888/miniapp/wuye/1.png',
-                    "squre": 42,
-                    "room_account": 2,
-                    "rent_type": 0,
-                    "price": 100,
-                    'distance': {
-                        'num': 0,
-                        'unit': 'm'
-                    },
-                    "room_type": 0,
-                    "unit": 0,
-                    'title': '急租芳馨园  紧邻地铁 没有中J费 押一付一 家具家电全新'
-                },
-                {
-                    "location": {
-                        'province': '天津市',
-                        'city': '天津市',
-                        'area': "塘沽区",
-                        'other': '32华里小区',
-                        'longitude': 117.1032432,
-                        'latitude': 39.3012322
-                    },
-                    'pic': 'http://127.0.0.1:8888/miniapp/wuye/1.png',
-                    "squre": 24,
-                    "room_account": 1,
-                    "rent_type": 0,
-                    "price": 108,
-                    'distance': {
-                        'num': 0,
-                        'unit': 'm'
-                    },
-                    "room_type": 0,
-                    "unit": 0,
-                    'title': '急租芳馨园  紧邻地铁 没有中J费 押一付一 家具家电全新'
-                },
-                {
-                    "location": {
-                        'province': '天津市',
-                        'city': '天津市',
-                        'area': "塘沽区",
-                        'other': '32华里小区',
-                        'longitude': 117.2321123,
-                        'latitude': 39.1201233
-                    },
-                    'pic': 'http://127.0.0.1:8888/miniapp/wuye/1.png',
-                    "squre": 31,
-                    "room_account": 3,
-                    "rent_type": 0,
-                    "price": 122,
-                    'distance': {
-                        'num': 0,
-                        'unit': 'm'
-                    },
-                    "room_type": 0,
-                    "unit": 0,
-                    'title': '城市之光 福地广场附近 精装主卧 包物业无线取暖 随时看房'
-                }
-            ]
-        },
+        fullData: {},
         selected_data: {},
         show_Data: {},
         content: [],
@@ -892,12 +81,59 @@ Page({
             title: '加载中...',
             icon: 'loading',
             duration: 2000000
-        })
+        });
+
         let that = this;
+
+        this.getAuth();
+    },
+
+    getData: function(data = {}) {
+        wx.showToast({
+            title: '加载中...',
+            icon: 'loading',
+            duration: 2000000
+        });
+        let that = this;
+        app.request(that, app.globalData.baseURI + 'rent', 'GET', data);
+    },
+
+    backData: function(e) {
+
+        if (e == 'null') {
+            this.setData({
+                isload: false
+            });
+            wx.hideToast();
+            return;
+        }
+
+        this.setData({
+            selected_data: {}
+        });
+
+        let that = this;
+        let data = e.data;
+        console.log(data);
+
+        this.setData({
+            fullData: e.data
+        });
+        wx.hideToast();
         this.setData({
             selected_data: that.data.fullData.cont
-        })
+        });
 
+        that.setdistance();
+        wx.stopPullDownRefresh();
+    },
+
+    _blur: function() {
+        this.showList(0);
+    },
+
+    getAuth: function() {
+        let that = this;
         wx.getSetting({
             success(res) {
                 if (res.authSetting['scope.userLocation']) {
@@ -917,21 +153,22 @@ Page({
                                 success() {
                                     that.setData({
                                         selected_data: that.data.selected_data
-                                    })
+                                    });
                                 }
                             });
                         }
-                    })
+                    });
                 }
             },
             fail(res) {},
         });
     },
+
     showList: function(e) {
         let idx = typeof(e) == 'object' ? e.currentTarget.dataset.nav : e;
         let that = this;
         let correct = (that.data.shownavindex == idx);
-        console.log(correct, idx, e, typeof(e), typeof(e) == 'object')
+        console.log(correct, idx, e, typeof(e), typeof(e) == 'object');
         this.setData({
             qyopen: (idx == 5 && !that.data.qyopen && !correct) ? true : false,
             content_open: (correct || idx == 0 || idx == 5 || idx >= 10) ? false : true,
@@ -975,9 +212,6 @@ Page({
         }
 
     },
-    _blur: function() {
-        this.showList(0)
-    },
     getDistance: function(lat1, lng1, lat2, lng2) {
         lat1 = lat1 || 0;
         lng1 = lng1 || 0;
@@ -1004,12 +238,11 @@ Page({
             'longitude': that.data.local.longitude,
             'latitude': that.data.local.latitude,
             'status': true
-        }
+        };
         let local = (that.data.local.latitude == 0 && that.data.local.longitude == 0);
         that.data.selected_data.forEach(function(element, index) {
             that.getDistance(that.data.local.latitude, that.data.local.longitude, element.location.latitude, element.location.longitude);
             let long = parseInt(that.data.distence);
-            console.log(long);
             data[index] = element;
             data[index].distance.num = local ? '未知' : (long > 1000 ? (long / 1000).toFixed(1) : long);
             data[index].distance.unit = local ? '距离' : ((long >= 1000) ? 'km' : 'm');
@@ -1017,11 +250,11 @@ Page({
         this.setData({
             show_Data: data,
             selected_data: data
-        })
+        });
         console.log(that.data.show_Data);
     },
     searchBox: function(e) {
-        console.log(e.detail.value)
+        console.log(e.detail.value);
     },
     Esort: function(e) {
         console.log(e);
@@ -1046,13 +279,13 @@ Page({
          */
     },
     setE: function(idx, coun, e = 0) {
-        var tmp = this.data.sort_type
-        tmp.sort_type = idx,
+        var tmp = this.data.sort_type;
+        tmp.sort_type = idx;
             this.setData({
-                sort_type: tmp
+                sort_type: tmp,
             });
-        tmp = this.data.sort_type
-        tmp.sort_type = coun
+        tmp = this.data.sort_type;
+        tmp.sort_type = coun;
         this.setData({
             sort_type: tmp
         });
@@ -1062,40 +295,40 @@ Page({
         }
     },
     selectLocation: function(e) {
-        console.log(this)
+        console.log(this);
         let that = this;
-        Math.pow()
+        let tmp;
         switch (e.currentTarget.dataset.tpy) {
 
             case 'sort_type':
-                var tmp = this.data.sort_type
-                tmp.current = e.currentTarget.dataset.idx
+                tmp = this.data.sort_type;
+                tmp.current = e.currentTarget.dataset.idx;
                 this.setData({
                     sort_type: tmp
                 });
                 this.setE(e.currentTarget.dataset.idx, e.currentTarget.dataset.coun, 1);
                 break;
             case 'rent_type':
-                var tmp = this.data.rent_type
-                console.log(tmp)
-                tmp.current = e.currentTarget.dataset.idx
-                console.log(tmp)
+                tmp = this.data.rent_type;
+                console.log(tmp);
+                tmp.current = e.currentTarget.dataset.idx;
+                console.log(tmp);
                 this.setData({
                     rent_type: tmp
                 });
                 this.setE(e.currentTarget.dataset.idx, e.currentTarget.dataset.coun);
                 break;
             case 'price':
-                var tmp = this.data.price
-                tmp.current = e.currentTarget.dataset.idx
+                tmp = this.data.price;
+                tmp.current = e.currentTarget.dataset.idx;
                 this.setData({
                     price: tmp
                 });
                 this.setE(e.currentTarget.dataset.idx, e.currentTarget.dataset.coun);
                 break;
             case 'room_count':
-                var tmp = this.data.room_count
-                tmp.current = e.currentTarget.dataset.idx
+                tmp = this.data.room_count;
+                tmp.current = e.currentTarget.dataset.idx;
                 this.setData({
                     room_count: tmp
                 });
@@ -1132,14 +365,22 @@ Page({
             success(res) {
                 that.setData({
                     local: res
-                })
-                console.log(res);
+                });
             },
             complete() {
-                that.setdistance();
                 wx.hideToast();
+                that.getData();
             }
-        })
+        });
 
-    }
-})
+    },
+
+    goTop: function(e) {
+        this.setData({
+            scrollTop: 0
+        });
+    },
+    onPullDownRefresh: function() {
+        this.getData();
+    },
+});

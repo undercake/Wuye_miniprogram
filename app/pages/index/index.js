@@ -1,54 +1,88 @@
 //index.js
 //获取应用实例
-const app = getApp()
+const app = getApp();
 
 Page({
-  data: {
-    motto: 'Hello World',
-    userInfo: {},
-    hasUserInfo: false,
-    canIUse: wx.canIUse('button.open-type.getUserInfo')
-  },
-  //事件处理函数
-  bindViewTap: function() {
-    wx.navigateTo({
-      url: '../logs/logs'
-    })
-  },
-  onLoad: function () {
-    if (app.globalData.userInfo) {
-      this.setData({
-        userInfo: app.globalData.userInfo,
-        hasUserInfo: true
-      })
-    } else if (this.data.canIUse){
-      // 由于 getUserInfo 是网络请求，可能会在 Page.onLoad 之后才返回
-      // 所以此处加入 callback 以防止这种情况
-      app.userInfoReadyCallback = res => {
-        this.setData({
-          userInfo: res.userInfo,
-          hasUserInfo: true
-        })
-      }
-    } else {
-      // 在没有 open-type=getUserInfo 版本的兼容处理
-      wx.getUserInfo({
-        success: res => {
-          app.globalData.userInfo = res.userInfo
-          this.setData({
-            userInfo: res.userInfo,
-            hasUserInfo: true
-          })
+    data: {
+        hasUserInfo: false,
+        remote_json: {},
+        pageData: '',
+        isload: false,
+        loadfail: 'none',
+    },
+
+    onLoad: function() {
+        this.loadData();
+    },
+
+    loadData: function() {
+        console.log('loading');
+        wx.showToast({
+            title: '加载中...',
+            icon: 'loading',
+            duration: 2000000
+        });
+        let that = this;
+        app.request(that, app.globalData.baseURI + 'index');
+    },
+
+    backData: function(e) {
+
+        console.log(e);
+
+        if (e == 'null') {
+            wx.hideToast();
+            this.setData({loadfail:'block'});
+            wx.showToast({
+                title: '数据跑火星去了，请稍候再试',
+                icon: 'none',
+                duration: 4100
+            });
+            return;
         }
-      })
-    }
-  },
-  getUserInfo: function(e) {
-    console.log(e)
-    app.globalData.userInfo = e.detail.userInfo
-    this.setData({
-      userInfo: e.detail.userInfo,
-      hasUserInfo: true
-    })
-  }
-})
+
+        let data = e.data;
+        this.setData({
+            remote_json: data,
+            isload: true
+        });
+
+        wx.hideToast();
+        wx.stopPullDownRefresh();
+
+        console.log(e);
+    },
+    //事件处理函数
+    toptap: function(e) {
+        console.log(e);
+        let type = e.currentTarget.dataset.type;
+        let data = e.currentTarget.dataset.d;
+        switch (type) {
+            case 'news':
+                wx.navigateTo({
+                    url: '/pages/news/detail?page=' + data
+                });
+                break;
+            case 'rent':
+                wx.navigateTo({
+                    url: '/pages/rent/detail?localid=' + data
+                });
+                break;
+            case 'around':
+                wx.navigateTo({
+                    url: '/pages/around/detail?&detail=' + data
+                });
+                break;
+            case 'faq':
+                wx.navigateTo({
+                    url: '/pages/faq/detail?from=faq&detail=' + data
+                });
+                break;
+        }
+        console.log(type, data);
+    },
+
+    onPullDownRefresh: function() {
+        this.loadData();
+    },
+});

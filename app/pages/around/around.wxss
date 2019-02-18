@@ -1,32 +1,67 @@
 /* pages/around/around.wxss */
-
-page{
+page {
     height: 100%;
 }
 
-.listTitle text{
-    line-height: 60rpx;
+.listTitle {
+    min-width: 120rpx;
+    display: table-cell;
 }
 
-.container{
+.listTitle text {
+    margin-left: 20rpx;
+    line-height: 60rpx;
+    height: 40rpx;
+}
+
+.container {
     padding: 20rpx 0;
     background: #fff;
 }
 
-.listitem{
-    margin-top:10rpx;
+.listitem {
+    margin-top: 10rpx;
 }
 
-.titleItem{
-    width:100%;
-    line-height:40rpx;
+#show_cont ::-webkit-scrollbar {
+    width: 1rpx;
+    /* height: 1px; */
+    /* color: transparent; */
+}
+
+.titleItem {
+    width: 100%;
+    line-height: 40rpx;
+    height: 60rpx;
     border-bottom: 1px solid #ddd;
 }
 
-.selected text{
+.selected text {
     border-bottom: 2rpx solid #666;
 }
 
-swiper.show{
+swiper.show {
     width: 100%;
+}
+
+.refreshable {
+    background-color: rgba(255,255,255,0);
+    position: fixed;
+    right: 50rpx;
+    top: 480rpx;
+    height: 400rpx;
+    width: 33px;
+    /* opacity: .6; */
+}
+
+.refresh {
+    background-color: #fff;
+    width: 31px;
+    height: 31px;
+    line-height: 31px;
+    font-size: 20px;
+    font-weight: bold;
+    border-radius: 50%;
+    box-shadow: 0 0 10px 5px #999;
+    opacity: .8;
 }
