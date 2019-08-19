@@ -1,0 +1,435 @@
+{
+    "basic": 0,
+    "pages": {
+        "index": {
+            "mainThemeColor": {
+                "back": "#05509d",
+                "button": "#05509d",
+                "front": "#ffffff"
+            },
+            "swiper": {
+                "indicatorDots": true,
+                "autoplay": true,
+                "interval": 2281,
+                "duration": 1254,
+                "circular": true,
+                "height": 300,
+                "navpic": [{
+                    "img": "http://dummyimage.com/750x300/79f2f1/f2ce79&text=sulian",
+                    "datatype": "news",
+                    "data": 175
+                }, {
+                    "img": "http://dummyimage.com/750x300/aa79f2/79f287&text=sulian",
+                    "datatype": "rent",
+                    "data": 132
+                }, {
+                    "img": "http://dummyimage.com/750x300/f2798d/79b1f2&text=sulian",
+                    "datatype": "news",
+                    "data": 144
+                }, {
+                    "img": "http://dummyimage.com/750x300/d4f279/ec79f2&text=sulian",
+                    "datatype": "around",
+                    "data": 70
+                }, {
+                    "img": "http://dummyimage.com/750x300/79f2c9/f2a579&text=sulian",
+                    "datatype": "around",
+                    "data": 65
+                }, {
+                    "img": "http://dummyimage.com/750x300/8279f2/93f279&text=sulian",
+                    "datatype": "faq",
+                    "data": 20
+                }, {
+                    "img": "http://dummyimage.com/750x300/f279b6/79d9f2&text=sulian",
+                    "datatype": "rent",
+                    "data": 38
+                }, {
+                    "img": "http://dummyimage.com/750x300/f2e779/c379f2&text=sulian",
+                    "datatype": "news",
+                    "data": 89
+                }]
+            },
+            "massages": {
+                "interval": 2549,
+                "duration": 3506,
+                "content": ["SsxuttPngrQvhswcvvoDoabqzsvKtyyEgxixlz", "IsecqziixjEweokliySusakSsvt", "SmwuttxpBfmtwOtbqpjldxxOfbpiQdxhyct", "EyvtmfdVgrzHzzptle"]
+            },
+            "navpic": ["http://dummyimage.com/40x40/79f2a0/f27d79&text=R", "http://dummyimage.com/40x40/7998f2/bbf279&text=R", "http://dummyimage.com/40x40/f279de/79f2e2&text=R", "http://dummyimage.com/40x40/f2be79/9b79f2&text=R"],
+            "topnews": {
+                "title": "Cbinq ocOcirtb yHjevuuL ellhcs ngl",
+                "content": "道处需知别节叫它单式易每。青议每布着听商据权什按物议安于。片也打九你持族般色里题市物定切。场革样不达四类许认性机先办教车劳热必。状圆京第部而正身约见实听层。水年品两证光角这后该提布安日。"
+            },
+            "newsList": [{
+                "image": "http://dummyimage.com/230x150/7af279/f2799d&text=131313",
+                "title": "Enlq DbnpvwhY plbwtulfPbu gbFsxvjt Oyly",
+                "id": 156,
+                "contex": "织儿成样力常得色月很集容重明便压。平也此支立关属干分界争处目。般向积每少飞全车年说五圆结。只管积变生社目器技线在米务以界被酸体。劳团在手品拉去林而此机众基山便线上。"
+            }, {
+                "image": "http://dummyimage.com/230x150/79c0f2/e4f279&text=131313",
+                "title": "Hob ckcvuOfoanrf sjXmtvn lPhjudvT hqxnisbo Pkcr fczho",
+                "id": 199,
+                "contex": "设革两型计拉省矿动律们式议。两验斯矿小需色者分必精难。系手六向界调采片当观级几斗。器该前写示了管自到北们平土。"
+            }, {
+                "image": "http://dummyimage.com/230x150/dd79f2/79f2b9&text=131313",
+                "title": "Mjq oymjcNw jvucce jYzrgblod Sctsa",
+                "id": 190,
+                "contex": "化信就示更局水深持法状共么具南张快三。内电治存走平省联导被元织正。更团科青据毛只快那别八前利带华化学。类角外属确达期切社都力形合极些人。别往争传知感花眼维平共军战保。受技分没种于八相共明党百。"
+            }, {
+                "image": "http://dummyimage.com/230x150/f29679/797ff2&text=131313",
+                "title": "Nw gnAmfc kTokpU tltgcjU zzct",
+                "id": 64,
+                "contex": "那争化层内接又带具才节内至压问。厂边断所区区非设育且改为更由。相理标量适济是劳前油定又式者得由。感路往位细新家今五西里打生半南已只。"
+            }, {
+                "image": "http://dummyimage.com/230x150/a2f279/f279c5&text=131313",
+                "title": "Volesjn pBthena vOdckhdSk ablwl ox",
+                "id": 148,
+                "contex": "示温且置般容同打派土斯压科专管。利世周但共准什后研于业县口水团组。品上体许行再难原利走标年工。周也众度程置油成流调识约出影车也住。"
+            }, {
+                "image": "http://dummyimage.com/230x150/79e9f2/f2d779&text=131313",
+                "title": "Mqiju pgJkdz ivzjQ kjdy qilfzL iyxgEpl imuuKiymw",
+                "id": 123,
+                "contex": "机术元厂加越每土革问明之节。道属海具议老利十过第前交对记的。持确都金图空头务真改该面物合结。要切把见理至研术算极交问中党力细又。技就进段争海些起取集据华复参复。"
+            }, {
+                "image": "http://dummyimage.com/230x150/b479f2/79f291&text=131313",
+                "title": "My wssznd MngqyTt wkGxsSr bdeye do",
+                "id": 166,
+                "contex": "石记八通下已清们认门热九以将酸光心地。出命准养手转京适林确场空目圆直示就。各又指火参治始确道明中此京期。级长做习一格提间步目太治该。"
+            }, {
+                "image": "http://dummyimage.com/230x150/f27984/79a7f2&text=131313",
+                "title": "Tg cpVdxf fhhplSvhSi wduUy uiuie vdvFpjudwkgF ehvay",
+                "id": 11,
+                "contex": "学律间明间明特太正系世接响。参定林反空开者发海八明示空。温法连行维手向别运状克社国包打。适一标求水圆调半应子中面四争作北取。名民清千同接适局国技真素以。"
+            }, {
+                "image": "http://dummyimage.com/230x150/cbf279/f279ee&text=131313",
+                "title": "Lbt iiBay cbttM sbfvky Pvtrlk kxTbj jLbde uzrlx",
+                "id": 15,
+                "contex": "美安务由劳心们她导党重但把清如众天。主了精示度新高族相县特候快常。类社容本通亲处进四流火美值都程。给养事放向边许无特物铁界元定转专和。且体外小入分老习带争道格及识农等。划七机派响京前看提而构认。军二可者电增何众分例更积信为又更较。"
+            }, {
+                "image": "http://dummyimage.com/230x150/79f2d2/f2af79&text=131313",
+                "title": "Uncs qoxnduOd oSckdxruv Wfmyx kakmJ svuSrv",
+                "id": 128,
+                "contex": "及大规那上便中很示展道五们素技种。老体习大水论外张但写治我放。包织走起数书备张除提进律称。十因酸统思可需众到里才参带白无术三。家容许主长好不青究头听明时。提群例三元划才向走通改率需物适成除。"
+            }]
+        },
+        "pay":{
+            "2018": [{
+                    "name": "12\u6708\u8d26\u5355",
+                    "charge": 1202.3,
+                    "checked": false,
+                    'chargeId': 12
+                },
+                {
+                    "name": "11\u6708\u8d26\u5355",
+                    "charge": 1202.3,
+                    "checked": false,
+                    'chargeId': 11
+                },
+                {
+                    "name": "10\u6708\u8d26\u5355",
+                    "charge": 1202.3,
+                    "checked": false,
+                    'chargeId': 10
+                },
+                {
+                    "name": "9\u6708\u8d26\u5355",
+                    "charge": 1202.3,
+                    "checked": false,
+                    'chargeId': 9
+                },
+                {
+                    "name": "8\u6708\u8d26\u5355",
+                    "charge": 1202.3,
+                    "checked": false,
+                    'chargeId': 8
+                },
+                {
+                    "name": "7\u6708\u8d26\u5355",
+                    "charge": 1202.3,
+                    "checked": false,
+                    'chargeId': 7
+                },
+                {
+                    "name": "6\u6708\u8d26\u5355",
+                    "charge": 1202.3,
+                    "checked": false,
+                    'chargeId': 6
+                },
+                {
+                    "name": "5\u6708\u8d26\u5355",
+                    "charge": 1202.3,
+                    "checked": false,
+                    'chargeId': 5
+                },
+                {
+                    "name": "4\u6708\u8d26\u5355",
+                    "charge": 1202.3,
+                    "checked": false,
+                    'chargeId': 4
+                },
+                {
+                    "name": "3\u6708\u8d26\u5355",
+                    "charge": 1202.3,
+                    "checked": false,
+                    'chargeId': 3
+                },
+                {
+                    "name": "2\u6708\u8d26\u5355",
+                    "charge": 1202.3,
+                    "checked": false,
+                    'chargeId': 2
+                },
+                {
+                    "name": "1\u6708\u8d26\u5355",
+                    "charge": 1202.3,
+                    "checked": false,
+                    'chargeId': 1
+                }
+            ],
+            "2017": [{
+                "name": "12\u6708\u8d26\u5355",
+                "charge": 1202.3,
+                "checked": false,
+                'chargeId': 13
+            }]
+        },
+        "rent": {
+            "commit": {
+                "location": {
+                    "province": "所在省",
+                    "city": "所在市",
+                    "area": "所在区",
+                    "other": "具体地址",
+                    "latitude": "经度",
+                    "longitude": "纬度"
+                },
+                "pic": "首图地址",
+                "squre": "租住面积",
+                "room_account": "房间数",
+                "rent_type": "租住类型0合租1整租",
+                "price": "价格",
+                "room_type": "租房类型:0主卧1次卧",
+                "unit": "单位：0元每天1元每月2元每季度3元每年",
+                "title": "租贴标题"
+            },
+            "cont": [{
+                "local_id": 7,
+                "location": {
+                    "province": "天津市",
+                    "city": "天津市",
+                    "area": "河东区",
+                    "other": "Vx wDwbgf qiemF cxvy otNd jpcgkGx bpfutFhn unyTxpxyo小区",
+                    "longitude": 117.8707,
+                    "latitude": 39.524079
+                },
+                "pic": "http://dummyimage.com/230x150/797cf2/a0f279&text=news",
+                "squre": 12,
+                "room_account": 5,
+                "rent_type": 0,
+                "price": 6661,
+                "distance": {
+                    "num": 0,
+                    "unit": "m"
+                },
+                "room_type": 1,
+                "unit": 1,
+                "title": "EgyiwxkbKkjryybwtXlggf"
+            }, {
+                "local_id": 80,
+                "location": {
+                    "province": "天津市",
+                    "city": "天津市",
+                    "area": "河东区",
+                    "other": "Rmhe kOvvthlHuh jtqchvfLxw vpahTduxc Rxrw小区",
+                    "longitude": 117.5684,
+                    "latitude": 39.709
+                },
+                "pic": "http://dummyimage.com/230x150/f279c3/79e6f2&text=news",
+                "squre": 48,
+                "room_account": 3,
+                "rent_type": 1,
+                "price": 9376,
+                "distance": {
+                    "num": 0,
+                    "unit": "m"
+                },
+                "room_type": 1,
+                "unit": 0,
+                "title": "IhropxpOzx npvk xvrRelmmvk Nem ypypR fpanpyfpv"
+            }, {
+                "local_id": 26,
+                "location": {
+                    "province": "天津市",
+                    "city": "天津市",
+                    "area": "河西区",
+                    "other": "Yriota hYpnwpPaqutt dGrwcujp Qrtsumuhd Qyzrdtwtve小区",
+                    "longitude": 118.2238,
+                    "latitude": 40.407229
+                },
+                "pic": "http://dummyimage.com/230x150/f2da79/b779f2&text=news",
+                "squre": 92,
+                "room_account": 3,
+                "rent_type": 1,
+                "price": 9668,
+                "distance": {
+                    "num": 0,
+                    "unit": "m"
+                },
+                "room_type": 0,
+                "unit": 2,
+                "title": "Zci jgebfqBvof ihpuTpv Bzpim ftxbg PffgjvB bohbhl"
+            }, {
+                "local_id": 94,
+                "location": {
+                    "province": "天津市",
+                    "city": "天津市",
+                    "area": "红桥区",
+                    "other": "Zdpt filKilpE jjygEm woqsgcm小区",
+                    "longitude": 117.334366,
+                    "latitude": 40.12224
+                },
+                "pic": "http://dummyimage.com/230x150/79f293/f27981&text=news",
+                "squre": 88,
+                "room_account": 6,
+                "rent_type": 1,
+                "price": 5288,
+                "distance": {
+                    "num": 0,
+                    "unit": "m"
+                },
+                "room_type": 1,
+                "unit": 0,
+                "title": "Dex pFyhx bblajnCbv pfndFxd vhttc"
+            }, {
+                "local_id": 11,
+                "location": {
+                    "province": "天津市",
+                    "city": "天津市",
+                    "area": "河西区",
+                    "other": "MwdJe udoqgt  AtqBqbf thegjOks cpa小区",
+                    "longitude": 117.55821,
+                    "latitude": 40.08706
+                },
+                "pic": "http://dummyimage.com/230x150/79a5f2/c8f279&text=news",
+                "squre": 92,
+                "room_account": 5,
+                "rent_type": 0,
+                "price": 6690,
+                "distance": {
+                    "num": 0,
+                    "unit": "m"
+                },
+                "room_type": 1,
+                "unit": 0,
+                "title": "Fhca oQosuPibkotC cfjBl potE hbto o"
+            }, {
+                "local_id": 50,
+                "location": {
+                    "province": "天津市",
+                    "city": "天津市",
+                    "area": "南开区",
+                    "other": "Bgx ojavy grIehQk kpwlJtri ohzl q小区",
+                    "longitude": 117.8562,
+                    "latitude": 40.84758
+                },
+                "pic": "http://dummyimage.com/230x150/f279eb/79f2d5&text=news",
+                "squre": 91,
+                "room_account": 4,
+                "rent_type": 0,
+                "price": 6196,
+                "distance": {
+                    "num": 0,
+                    "unit": "m"
+                },
+                "room_type": 1,
+                "unit": 1,
+                "title": "Ros buruQ xisz ooBthkbz hwi"
+            }, {
+                "local_id": 36,
+                "location": {
+                    "province": "天津市",
+                    "city": "天津市",
+                    "area": "南开区",
+                    "other": "Pna ifuRxui vfgfoiQux jxhSdr se小区",
+                    "longitude": 117.540462,
+                    "latitude": 39.82776
+                },
+                "pic": "http://dummyimage.com/230x150/f2b179/8e79f2&text=news",
+                "squre": 32,
+                "room_account": 3,
+                "rent_type": 1,
+                "price": 3271,
+                "distance": {
+                    "num": 0,
+                    "unit": "m"
+                },
+                "room_type": 1,
+                "unit": 1,
+                "title": "Yg wwuLmhfngFy ewmvonKbzx rzjaZli pLliyr"
+            }, {
+                "local_id": 22,
+                "location": {
+                    "province": "天津市",
+                    "city": "天津市",
+                    "area": "红桥区",
+                    "other": "Ulqm eocDdkmkzu mnXodxs juAk e小区",
+                    "longitude": 118.793536,
+                    "latitude": 40.337642
+                },
+                "pic": "http://dummyimage.com/230x150/87f279/f279aa&text=news",
+                "squre": 42,
+                "room_account": 3,
+                "rent_type": 0,
+                "price": 8122,
+                "distance": {
+                    "num": 0,
+                    "unit": "m"
+                },
+                "room_type": 0,
+                "unit": 0,
+                "title": "Pbykgy qsmQxwsge mlyyMdb jefCojqsg wewwYrfy mtirpuU sxh"
+            }, {
+                "local_id": 63,
+                "location": {
+                    "province": "天津市",
+                    "city": "天津市",
+                    "area": "河东区",
+                    "other": "Tzrrs lqJrbnue xqkmVksu gdHqhcnlT wphPqbqq 小区",
+                    "longitude": 118.9325,
+                    "latitude": 40.2375
+                },
+                "pic": "http://dummyimage.com/230x150/79cdf2/f1f279&text=news",
+                "squre": 17,
+                "room_account": 4,
+                "rent_type": 0,
+                "price": 1322,
+                "distance": {
+                    "num": 0,
+                    "unit": "m"
+                },
+                "room_type": 1,
+                "unit": 2,
+                "title": "Cazr ivmotYm vsYfgnn nXbbncE grzf"
+            }, {
+                "local_id": 11,
+                "location": {
+                    "province": "天津市",
+                    "city": "天津市",
+                    "area": "河东区",
+                    "other": "Pcft voaamCgiou zdudNxfFtly Naxeev x小区",
+                    "longitude": 117.4336,
+                    "latitude": 39.5858
+                },
+                "pic": "http://dummyimage.com/230x150/d079f2/79f2ac&text=news",
+                "squre": 80,
+                "room_account": 2,
+                "rent_type": 1,
+                "price": 3936,
+                "distance": {
+                    "num": 0,
+                    "unit": "m"
+                },
+                "room_type": 1,
+                "unit": 2,
+                "title": "Vzmc tGfdslxr rjyWbrdnOs rrpcdLwrvx juiAlsN ergnj"
+            }]
+        }
+        "}}

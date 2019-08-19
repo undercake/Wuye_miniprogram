@@ -3,7 +3,7 @@
     <view style="margin: 10rpx 0;">
         <block wx:for="{{datalist}}" wx:for-item="item" wx:for-index="index">
             <view style="margin-top: 10rpx;background-color: #fff;padding:15rpx 0">
-                <navigator url="/pages/detail/detail?from=news&newsid={{item.id}}">
+                <navigator url="/pages/news/detail?id={{item.id}}">
                     <view class="dsp_flex">
                         <view class="flex_cell_6 txt_center">
                             <image class="m_a" style="width:230rpx;height:150rpx" src="{{item.image}}"></image>

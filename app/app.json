@@ -11,7 +11,8 @@
     "pages/form/form",
     "pages/massage/massage",
     "pages/detail/detail",
-    "pages/news/detail"
+    "pages/news/detail",
+    "pages/massage/detail"
   ],
   "window": {
     "enablePullDownRefresh": true,
@@ -65,5 +66,6 @@
   },
   "networkTimeout": {
     "request": 20000
-  }
+  },
+  "sitemapLocation": "sitemap.json"
 }

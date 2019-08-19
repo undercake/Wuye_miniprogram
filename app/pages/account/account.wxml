@@ -40,6 +40,7 @@
         <view class="con flex_cell_8">我的投诉</view>
         <view class="detail iconfont flex_cell_1 icon-right"></view>
     </navigator>
+
 </view>
 <view class="{{isLogin ? 'hide' : ''}}">
     <view class="item">

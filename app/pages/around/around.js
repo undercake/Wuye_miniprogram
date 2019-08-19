@@ -13,7 +13,8 @@ Page({
         lastTime: 0,
         lastSelect: 0,
         isload: false,
-        loadfail: 'none'
+        loadfail: 'none',
+        location:{}
     },
 
     /**
@@ -21,9 +22,7 @@ Page({
      */
     onLoad: function(options) {
         app.getLocation_(this);
-        this.getData();
     },
-
 
 
     getData: function(data = {}) {
@@ -32,23 +31,20 @@ Page({
             icon: 'loading',
             duration: 2000000
         });
+        data.page = 'around';
+        data.get = 'page';
         let that = this;
-        app.request(that, app.globalData.baseURI + 'around', 'GET', data);
+        app.request(that, app.globalData.baseURI , 'GET', data);
     },
 
     backData: function(e) {
         console.log(e);
+        wx.stopPullDownRefresh();
 
-        if (e == 'null') {
-            if (e == 'null') {
-                wx.hideToast();
-                this.setData({
-                    loadfail: 'block'
-                });
-                app.show_notice('数据跑火星去了，请稍候再试');
-                return;
-            }
-            wx.hideToast();
+        if (e == 'null' || typeof(e.data) != 'object') {
+            this.setData({
+                loadfail: 'block'
+            });
             return;
         }
 
@@ -56,29 +52,28 @@ Page({
             selected_data: {},
             isload: true
         });
-
-        let that = this;
-        let data = [{
-            'title': '全部',
-            'contant': []
-        }];
-        e.data.data.forEach(
-            (em, i) => {
-                data[0].contant = data[0].contant.concat(em.contant);
-            }
-        );
-
-        console.log(e.data.data);
-        data = data.concat(e.data.data);
-        console.log(data);
-
-        this.setData({
-            show_List: data
-        });
         wx.hideToast();
 
-        wx.stopPullDownRefresh();
+        let that = this;
+        // let data = [{
+        //     'title': '全部',
+        //     'contant': []
+        // }];
+        // e.data.data.forEach(
+        //     (em, i) => {
+        //         data[0].contant = data[0].contant.concat(em.contant);
+        //     }
+        // );
+
+        // console.log(e.data.data);
+        // data = data.concat(e.data.data);
+        // console.log(data);
+
+        this.setData({
+            show_List: e.data.data
+        });
         // that.setdistance();
+        this.datachange();
     },
 
     /**
@@ -104,7 +99,7 @@ Page({
         // 执行上面所指定的请求，结果会按照顺序存放于一个数组中，在callback的第一个参数中返回
         let that = this;
         query.exec((res) => {
-            let rate = res[0].height / 400;
+            let rate = res[0].height / 300;
             height = maxHeight - res[1].bottom - 20 * rate;
             console.log(res);
             that.setData({
@@ -142,7 +137,10 @@ Page({
         }
     },
 
-    datachange: function() {
+    datachange: function(e) {
+        console.log(e);
+        console.log(app.globalData.userLocation);
+        this.getData({"longitude":e.longitude,"latitude":e.latitude});
         var mapCtx = wx.createMapContext('map');
         mapCtx.moveToLocation();
     },

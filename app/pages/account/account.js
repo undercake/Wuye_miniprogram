@@ -8,14 +8,19 @@ Page({
     data: {
         isLogin: false,
         loading: false,
-        userData:''
+        loginFail:false,
+        userData:'',
+        hd:true
     },
 
     /**
      * 生命周期函数--监听页面加载
      */
     onLoad: function(options) {
-        this.bindGetUserInfo();
+        if (!this.data.isLogin) {
+            app.show_notice('自动登录中...');
+            this.bindGetUserInfo();
+        }
     },
 
     bindGetUserInfo: function() {
@@ -26,8 +31,10 @@ Page({
     },
 
     datachange: function(e) {
+        wx.hideToast();
         if(e == 'null'){
-            this.setData({loading: false});
+            this.setData({loading: false,loginFail:true});
+            app.show_notice('登录失败');
             return;
         }
         console.log(e);
@@ -35,6 +42,7 @@ Page({
             isLogin:true,
             userData: e
         });
+        app.show_notice('登录成功');
     },
 
     /**

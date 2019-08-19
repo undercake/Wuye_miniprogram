@@ -1,7 +1,8 @@
 <!--index.wxml-->
 <view style="{{isload ? 'display:block' : 'display:none' }}">
-    <swiper class="banner-swiper" indicator-dots="{{remote_json.swiper.indicatorDots}}" autoplay="{{remote_json.swiper.autoplay}}" interval="{{remote_json.swiper.interval}}" duration="{{remote_json.swiper.duration}}" circular="{{remote_json.swiper.circular}}" style="height:{{remote_json.swiper.height}}rpx">
-        <block wx:for="{{remote_json.swiper.navpic}}" wx:key="key">
+    <swiper class="banner-swiper" indicator-dots="{{remote_json.swiper.indicatorDots}}" autoplay="{{remote_json.swiper.autoplay}}" interval="{{remote_json.swiper.interval}}" duration="{{remote_json.swiper.duration}}" circular="{{remote_json.swiper.circular}}"
+        style="height:{{remote_json.swiper.height}}rpx">
+        <block wx:for="{{remote_json.swiper.navpic}}" wx:key="">
             <swiper-item bindtap="toptap" data-type="{{item.datatype}}" data-d="{{item.data}}">
                 <image src="{{item.img}}" class="slide-image" style="width:100%" mode="widthFix" />
             </swiper-item>
@@ -17,9 +18,9 @@
 
             <view class="txt_swiper_container m_a flex_cell_10">
                 <swiper style="height:100%" indicator-dots="{{false}}" autoplay="{{true}}" interval="{{remote_json.massages.interval}}" duration="{{remote_json.massages.interval}}" circular="{{true}}">
-                    <block wx:for="{{remote_json.massages.content}}" wx:for-index="idx" wx:for-item="item">
+                    <block wx:for="{{remote_json.massages.content}}" wx:key="" wx:for-index="idx" wx:for-item="item">
                         <swiper-item style="display:flex;align-items:center;width:90rpx">
-                            <view style="text-align:center;font-size:26rpx;-webkit-line-clamp:1;width:360rpx" class="m_a nowap">{{item}}</view>
+                            <view bindtap="toptap" data-type="massage" data-d="{{item.id}}" style="text-align:center;font-size:26rpx;-webkit-line-clamp:1;width:360rpx" class="m_a nowap">{{item.contant}}</view>
                         </swiper-item>
                     </block>
                 </swiper>
@@ -67,15 +68,15 @@
     </view>
 
     <view style="margin: 10rpx 0;">
-        <block wx:for="{{remote_json.newsList}}" wx:for-item="item" wx:for-index="index" wx:for-key>
-            <navigator class="item" url="/pages/news/detail?detail={{item.id}}" style="background-color: #fff;padding:15rpx 0">
+        <block wx:for="{{remote_json.newsList}}" wx:for-item="item" wx:for-index="index" wx:key="">
+            <navigator class="item" url="/pages/news/detail?id={{item.id}}" style="background-color: #fff;padding:15rpx 0">
                 <view class="dsp_flex">
                     <view class="flex_cell_6 txt_center">
                         <image class="m_a" style="width:230rpx;height:150rpx" src="{{item.image}}"></image>
                     </view>
                     <view class="flex_cell_10">
                         <view class="title nowap txt_center" style="-webkit-line-clamp:1;padding:0;line-height:60rpx;">{{item.title}}</view>
-                        <view class="container nowap" style="padding: 5rpx 20rpx;height: 80rpx;overflow: hidden;-webkit-line-clamp:2;">{{item.contex}}</view>
+                        <view class="container nowap" style="line-height40rpx;padding: 5rpx 20rpx;height: 80rpx;overflow: hidden;-webkit-line-clamp:2;">{{item.contex}}</view>
                     </view>
                 </view>
             </navigator>

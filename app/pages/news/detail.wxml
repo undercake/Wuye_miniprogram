@@ -1,9 +1,13 @@
 <!--pages/news/detail.wxml-->
 <view style="display:{{isload ? 'block' : none }};">
-    <view>
 
+    <view class="rich-text" nodes="{{node}}">
+        <wxParse transdata="{{children}}"></wxParse>
     </view>
 </view>
+
+
+
 
 
 <view style="display:{{isload ? 'none' : loadfail }};font-size:30rpx;color:#666;text-align:center;padding:100rpx 0;">

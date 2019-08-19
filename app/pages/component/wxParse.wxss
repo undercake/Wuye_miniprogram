@@ -1,0 +1,163 @@
+wxparse{
+    padding: 10rpx;
+    margin:0;
+    padding:0;
+    border: 0 none;
+    display: block;
+    font-family: Helvetica Neue, NotoSansHans-Regular, AvenirNext-Regular, arial, Hiragino Sans GB, Microsoft Yahei, WenQuanYi Micro Hei, serif;
+}
+
+.h1 {
+    font-size: 36px;
+}
+
+.h2 {
+    font-size: 30px;
+}
+
+.h3 {
+    font-size: 24px;
+}
+
+.h4 {
+    font-size: 36px;
+}
+
+.h5 {
+    font-size: 36px;
+}
+
+.hr {
+    height: 0;
+}
+
+.dl {
+    display: block;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+}
+
+.dd {
+    display: block;
+    margin-inline-start: 40px;
+}
+
+.ul{
+    counter-reset: ulist 1;
+}
+
+.ul .li::before {
+    content: counter(ulist);
+    margin-right: 10rpx;
+}
+
+.ol .li::before {}
+
+.li {
+    display: list-item;
+    text-align: -webkit-match-parent;
+}
+
+.ul, .menu, .dir {
+    display: block;
+    list-style-type: disc;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    padding-inline-start: 40px;
+}
+
+.table {
+    display: table;
+    width: 100%;
+    border-color: grey;
+    border-top-width: 0px;
+    border-right-width: 0px;
+    border-bottom-width: 0px;
+    border-left-width: 0px;
+    border-spacing: 0;
+    border-collapse: collapse;
+    width: 100%;
+}
+
+.tr {
+    display: table-row;
+    vertical-align: inherit;
+    border-color: inherit;
+}
+
+.td, .th {
+    display: table-cell;
+    vertical-align: inherit;
+    padding: 0;
+}
+
+.th {
+    font-weight: bold;
+    text-align: center;
+}
+
+.p {
+    display: block;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+}
+
+.blockquote {
+    display: block;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 40px;
+    margin-inline-end: 40px;
+}
+
+/****************************************/
+.table {
+    border-top: 1px solid #ccc;
+    border-left: 1px solid #ccc;
+}
+
+.table .td, .table .th {
+    border-bottom: 1px solid #ccc;
+    border-right: 1px solid #ccc;
+    padding: 3px 5px;
+}
+
+.table .th {
+    border-bottom: 2px solid #ccc;
+    text-align: center;
+}
+
+/* blockquote 样式 */
+.blockquote {
+    display: block;
+    border-left: 8px solid #d0e5f2;
+    padding: 5px 10px;
+    margin: 10px 0;
+    line-height: 1.4;
+    font-size: 100%;
+    background-color: #f1f1f1;
+}
+
+/* code 样式 */
+.code {
+    display: inline-block;
+    background-color: #f1f1f1;
+    border-radius: 3px;
+    padding: 3px 5px;
+    margin: 0 3px;
+}
+
+.pre .code {
+    display: block;
+}
+
+/* ul ol 样式 */
+.ul, .ol {
+    margin: 10px 0 10px 20px;
+}

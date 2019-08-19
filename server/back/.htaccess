@@ -1,0 +1,11 @@
+RewriteEngine On
+RewriteRule ([0-9a-zA-Z]+).tpl$ err.php?err=404
+
+
+ErrorDocument 401 /err.php?err=401
+ErrorDocument 403 /err.php?err=403
+ErrorDocument 404 /err.php?err=404
+ErrorDocument 500 /err.php?err=500
+ErrorDocument 502 /err.php?err=502
+ErrorDocument 503 /err.php?err=503
+ErrorDocument 400 /err.php?err=400

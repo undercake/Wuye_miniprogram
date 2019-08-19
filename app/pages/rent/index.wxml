@@ -17,7 +17,7 @@
                                 </view>
                                 <view class="" style="padding: 5rpx 20rpx;">
                                     <view>{{item.rent_type == 0 ? (item.room_type == 0 ? '主卧' : '次卧' ) : '整租'}}（{{item.room_account}}室） {{item.squre}}m<text class="sup">2</text></view>
-                                    <view style="height:40rpx;overflow:hidden;flex-wrap:nowrap;overflow:ellipsis;">{{item.location.area}} {{item.location.other}}</view>
+                                    <view style="line-height:40rpx;height:40rpx;overflow:hidden;flex-wrap:nowrap;overflow:ellipsis;">{{item.location.area}} {{item.location.other}}</view>
                                     <view><text class="iconfont icon-location">
                                         </text> {{item.distance.num}}{{item.distance.unit}}</view>
                                 </view>

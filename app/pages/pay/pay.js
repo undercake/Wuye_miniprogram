@@ -1,4 +1,5 @@
 // pages/pay/pay.js
+let app = getApp();
 Page({
 
     /**
@@ -6,90 +7,13 @@ Page({
      */
     data: {
         page: 'pay',
-        SumPay: 0,
-        ischeck: {},
-        checkData: {
-            "2018": [{
-                    "name": "12\u6708\u8d26\u5355",
-                    "charge": 1202.3,
-                    "checked": false,
-                    'chargeId': 12
-                },
-                {
-                    "name": "11\u6708\u8d26\u5355",
-                    "charge": 1202.3,
-                    "checked": false,
-                    'chargeId': 11
-                },
-                {
-                    "name": "10\u6708\u8d26\u5355",
-                    "charge": 1202.3,
-                    "checked": false,
-                    'chargeId': 10
-                },
-                {
-                    "name": "9\u6708\u8d26\u5355",
-                    "charge": 1202.3,
-                    "checked": false,
-                    'chargeId': 9
-                },
-                {
-                    "name": "8\u6708\u8d26\u5355",
-                    "charge": 1202.3,
-                    "checked": true,
-                    'chargeId': 8
-                },
-                {
-                    "name": "7\u6708\u8d26\u5355",
-                    "charge": 1202.3,
-                    "checked": false,
-                    'chargeId': 7
-                },
-                {
-                    "name": "6\u6708\u8d26\u5355",
-                    "charge": 1202.3,
-                    "checked": false,
-                    'chargeId': 6
-                },
-                {
-                    "name": "5\u6708\u8d26\u5355",
-                    "charge": 1202.3,
-                    "checked": true,
-                    'chargeId': 5
-                },
-                {
-                    "name": "4\u6708\u8d26\u5355",
-                    "charge": 1202.3,
-                    "checked": false,
-                    'chargeId': 4
-                },
-                {
-                    "name": "3\u6708\u8d26\u5355",
-                    "charge": 1202.3,
-                    "checked": false,
-                    'chargeId': 3
-                },
-                {
-                    "name": "2\u6708\u8d26\u5355",
-                    "charge": 1202.3,
-                    "checked": false,
-                    'chargeId': 2
-                },
-                {
-                    "name": "1\u6708\u8d26\u5355",
-                    "charge": 1202.3,
-                    "checked": false,
-                    'chargeId': 1
-                }
-            ],
-            "2017": [{
-                "name": "12\u6708\u8d26\u5355",
-                "charge": 1202.3,
-                "checked": false,
-                'chargeId': 13
-            }]
+        sum: {
+            pay: 0,
+            checked: false
         },
-
+        ischeck: {},
+        payData: {},
+        remote_json: {}
     },
 
     /**
@@ -97,44 +21,172 @@ Page({
      */
     onLoad: function(options) {
         console.log(options);
+        this.getData();
+    },
+
+
+    getData: function(data = {}) {
+        wx.showToast({
+            title: '加载中...',
+            icon: 'loading',
+            duration: 2000000
+        });
+        data.page = 'pay';
+        data.get = 'page';
+        let that = this;
+        app.request(that, app.globalData.baseURI, 'GET', data);
+    },
+
+    backData: function(e) {
+
+        wx.stopPullDownRefresh();
+        console.log(e, typeof(e.data));
+        if (e == 'err' || e == 'null' || typeof(e.data) != 'object') {
+            this.setData({
+                loadfail: 'block'
+            });
+            return;
+        }
+        wx.hideToast();
+
+        let data = e.data;
+        this.setData({
+            payData: data,
+            isload: true
+        });
+
+        this.checkdata();
+        console.log(e);
     },
 
     hasValue: function(obj, val) {
-        let rtn = false
+        let rtn = false;
         obj.forEach(
             (v, a) => {
                 console.log(v, a, obj, val);
                 if (v == val) {
-                    rtn = true
+                    rtn = true;
                 }
             }
         );
         return rtn;
     },
 
+    allChange: function(e) {
+        su = this.data.sum;
+        pay = this.data.payData;
+        console.log(pay.list, typeof(pay), pay);
+        if (su.checked) {
+            su.checked = false;
+            su.pay = 0;
+
+            for (let key in pay) {
+                pay[key].forEach(
+                    (e, i) => {
+                        pay[key][i].checked = false;
+                    }
+                );
+            }
+        } else {
+            su.pay = 0;
+            su.checked = true;
+            for (let key in pay) {
+                pay[key].forEach(
+                    (e, i) => {
+                        console.log(e, i);
+                        su.pay += e.charge * 100;
+                        pay[key][i].checked = true;
+                    }
+                );
+                console.log(key);
+            }
+
+            su.pay /= 100;
+
+        }
+        this.setData({
+            sum: su
+        });
+    },
+
     checkboxChange: function(e) {
         console.log(e);
         let that = this;
         let values = e.detail.value;
-        let ValueArr = [];
-        let tmp = [];
+        let tmp = [
+            []
+        ];
+        let s = this.data.sum;
+        let pay = this.data.payData;
+
         values.forEach((obj, idx) => {
             let val = obj.split('_');
-            tmp[idx] = val[1];
-            ValueArr[val[0]] = tmp;
-            console.log(1);
+            tmp[idx] = val;
         });
-        if (values.length == 0) {
-            that.setData({
-                SumPay: 0
-            })
-        } else {
 
+        console.log(tmp);
+
+        for (let key in pay) {
+            pay[key].forEach(
+                (e, i) => {
+                    pay[key][i].checked = false;
+                }
+            );
         }
+
+        s.pay = 0;
+        if (values.length > 0) {
+            tmp.forEach(
+                (e, i) => {
+                    pay[e[0]][e[1]].checked = true;
+                    s.pay += pay[e[0]][e[1]].charge * 100;
+                }
+            );
+            s.pay /= 100;
+        }
+
+        let allcheck = true;
+        for (let key in pay) {
+            pay[key].forEach(
+                (e, i) => {
+                    if (!e.checked) {
+                        allcheck = false;
+                        return false;
+                    }
+                }
+            );
+        }
+
+        console.log("ok");
+
+        s.checked = allcheck;
+
         that.setData({
-            ischeck: ValueArr
+            sum: s,
+            payData: pay
         });
 
+    },
+
+    checkdata: function() {
+        let s = this.data.sum;
+        let pay = this.data.payData;
+
+        s.pay = 0;
+        console.log(pay);
+        for (let key in pay) {
+            pay[key].forEach(
+                e => {
+                    if (e.checked) {
+                        s.pay += e.charge * 100;
+                    }
+                }
+            );
+        }
+        s.pay /= 100;
+        this.setData({
+            sum: s
+        });
     },
 
     /**
@@ -169,7 +221,7 @@ Page({
      * 页面相关事件处理函数--监听用户下拉动作
      */
     onPullDownRefresh: function() {
-
+        this.getData();
     },
 
     /**
@@ -185,4 +237,4 @@ Page({
     onShareAppMessage: function() {
 
     }
-})
+});

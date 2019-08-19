@@ -35,18 +35,26 @@ Page({
             if (this.data.bottom) return;
         }
         let that = this;
-        app.request(that, app.globalData.baseURI + 'news' + (back ? '' : '?count=' + that.data.loadcount));
+        let data = {
+            "page": "news",
+            "get": "page"
+        };
+        if (back) {
+            data.count = that.data.loadcount;
+        }
+        app.request(that, app.globalData.baseURI, 'GET', data);
     },
 
     backData: function(e) {
         console.log(e);
-        if (e == 'null') {
+        wx.stopPullDownRefresh();
+        if (e == 'null' || typeof(e.data) != 'object') {
             this.setData({
                 isload: false
             });
-            wx.hideToast();
             return;
         }
+        wx.hideToast();
 
         let data = e.data.content;
         let that = this;
@@ -66,8 +74,6 @@ Page({
             loadcount: that.data.loadcount + 1
         });
 
-        wx.hideToast();
-        wx.stopPullDownRefresh();
 
         console.log(e);
     },

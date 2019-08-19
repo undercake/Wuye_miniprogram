@@ -94,19 +94,20 @@ Page({
             icon: 'loading',
             duration: 2000000
         });
+        data.page = 'rent';
+        data.get = 'page';
         let that = this;
-        app.request(that, app.globalData.baseURI + 'rent', 'GET', data);
+        app.request(that, app.globalData.baseURI, 'GET', data);
     },
 
     backData: function(e) {
-
-        if (e == 'null') {
-            this.setData({
-                isload: false
-            });
-            wx.hideToast();
+        wx.stopPullDownRefresh();
+        if (e == 'null' || typeof(e.data) != 'object') {
+            this.setData({loadfail:'block'});
             return;
         }
+
+        wx.hideToast();
 
         this.setData({
             selected_data: {}
@@ -125,7 +126,6 @@ Page({
         });
 
         that.setdistance();
-        wx.stopPullDownRefresh();
     },
 
     _blur: function() {
@@ -146,16 +146,7 @@ Page({
                         },
                         fail: function() {
                             wx.hideToast();
-                            wx.showModal({
-                                title: '获取地理位置',
-                                content: '需要获取位置信息才能计算房源位置！',
-                                showCancel: false,
-                                success() {
-                                    that.setData({
-                                        selected_data: that.data.selected_data
-                                    });
-                                }
-                            });
+                            app.show_notice('需要获取位置信息才能计算房源位置！');
                         }
                     });
                 }
@@ -281,9 +272,9 @@ Page({
     setE: function(idx, coun, e = 0) {
         var tmp = this.data.sort_type;
         tmp.sort_type = idx;
-            this.setData({
-                sort_type: tmp,
-            });
+        this.setData({
+            sort_type: tmp,
+        });
         tmp = this.data.sort_type;
         tmp.sort_type = coun;
         this.setData({

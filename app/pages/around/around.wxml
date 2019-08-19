@@ -1,7 +1,7 @@
 <!--pages/around/around.wxml-->
 <view style="display:{{isload ? 'block' : 'none' }};">
 
-<map id="map" longitude="{{appData.UserLocation.longitude}}" latitude="{{appData.UserLocation.latitude}}" scale="14" show-location enable-zoom enable-scroll style="width: 100%; height: 400rpx;"></map>
+<map id="map" longitude="{{appData.UserLocation.longitude}}" latitude="{{appData.UserLocation.latitude}}" scale="14" show-location enable-zoom enable-scroll style="width: 100%; height: 300rpx;"></map>
 <view id="show_cont" class="container">
     <scroll-view scroll-with-animation scroll-into-view="view{{selected}}" scroll-x="{{true}}" id="cont_title" class="dsp_flex middle txt_center titleItem">
         <block wx:for="{{show_List}}" wx:for-index="idx" wx:for-item="item">
@@ -35,7 +35,7 @@
     </swiper>
 </view>
 
-<movable-area class="refreshable" style="height: {{scrollViewHeight/2}}px;">
+<movable-area class="refreshable" style="height: {{3*scrollViewHeight/4}}px;">
     <movable-view direction="all" out-of-bounds x="" y="{{scrollViewHeight/4}}" class="refresh txt_center iconfont icon-reload" bindtap="fresh">
     </movable-view>
 </movable-area>

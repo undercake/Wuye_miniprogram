@@ -1,0 +1,40 @@
+<!--pages/component/wxParse.wxml-->
+
+<block wx:for="{{transdata}}" wx:for-item="item" wx:key="" wx:for-index="index">
+
+    <block wx:if="{{item.tag == 'view'}}">
+        <block wx:if="{{item.childrenTypeString}}">
+            <view class="{{item.attr.class}}" style="{{item.attr.style}}">{{item.children}}</view>
+        </block>
+        <block wx:else>
+            <wxs module="m1">
+                var msg = "hello world"; module.exports.message = msg;
+            </wxs>
+            <view class="{{item.attr.class}}" style="{{item.attr.style}}"><wxParse transdata="{{item.children}}"></wxParse></view>
+        </block>
+    </block>
+
+    <block wx:elif="{{item.tag=='text'}}">
+        <block wx:if="{{item.childrenTypeString}}">
+            <text class="{{item.attr.class}}" style="{{item.attr.style}}">{{item.children}}</text>
+        </block>
+        <block wx:else>
+            <view class="{{item.attr.class}}" style="display:inline;{{item.attr.style}}"><wxParse style="display:inline" transdata="{{item.children}}"></wxParse></view>
+        </block>
+    </block>
+
+    <block wx:elif="{{item.tag=='audio'}}">
+        <audio class="{{item.attr.class}}" controls style="{{item.attr.style}}"></audio>
+    </block>
+
+    <block wx:elif="{{item.tag=='image'}}">
+        <image class="{{item.attr.class}}" src="{{item.attr.src}}" style="{{item.attr.style}}"></image>
+    </block>
+
+    <block wx:elif="{{item.tag=='video'}}">
+        <video class="{{item.attr.class}}" controls src="{{item.attr.src}}" style="{{item.attr.style}}"></video>
+    </block>
+
+    <block wx:else></block>
+
+</block>

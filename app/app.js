@@ -3,7 +3,9 @@ const rqst = require('utils/request.js');
 
 App({
     globalData: {
-        baseURI: 'https://www.easy-mock.com/mock/5c47cc222a79225e7e03044a/exp/miniapp/',
+        baseURI_: 'https://test.dlz149.me/miniapp/slapp/new/',
+        baseURI: 'https://test.dlz149.me/miniapp/server/slapp/new/',
+        baseURI_1: 'http://localhost:8888/miniapp/wuye/slapp/new/',
         isLogin: false,
         loginData: {},
         buttonColor: "#05509d",
@@ -19,14 +21,16 @@ App({
         },
     },
 
-    onLaunch: function() {
-        // let rtn = this.request(this, this.globalData.baseURI);
+    onLaunch: function(e) {
+        // console.log(e);
     },
 
     request: function(page, e, mtd = 'GET', data = {}) {
         let that = this;
         rqst.sendRequest(e, mtd, data).then(v => {
             page.backData(v);
+            wx.hideToast();
+            // console.log(v);
             try {
                 wx.setNavigationBarColor({
                     frontColor: v.data.mainThemeColor.front,
@@ -40,7 +44,8 @@ App({
             } catch (e) {
                 console.log(e);
             }
-        });
+
+        }).catch(error => {console.log(error);});
 
     },
 
@@ -58,6 +63,7 @@ App({
         wx.getLocation({
             type: 'wgs84',
             success(res) {
+                page.datachange(res);
                 that.globalData.userLocation = {
                     'longitude': res.longitude,
                     'latitude': res.latitude,
@@ -69,8 +75,8 @@ App({
                 };
                 console.log(res);
             },
-            complete() {
-                page.datachange();
+            fail(){
+                page.datachange("fail");
             }
         });
     },
@@ -94,17 +100,13 @@ App({
                 }
             },
             fail(res) {
-                console.log(res);
+                page.datachange("fail");
             },
         });
     },
 
     show_notice: function(e) {
-        wx.showToast({
-            title: e,
-            icon: 'none',
-            duration: 4100
-        });
+        rqst.notice(e);
     },
 
     UserLogin: function(page) {

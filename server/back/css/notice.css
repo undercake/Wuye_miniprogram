@@ -1,0 +1,102 @@
+.NoticeBackgroundWhite {
+    z-index: 1080;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, .7);
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+}
+
+.modal-header .close {
+    font-size: 28px;
+    margin-top: -8px;
+    font-weight: normal;
+}
+
+.modal-title {
+    font-size: 14px;
+}
+
+.modal-footer {
+    margin-top: 0px;
+}
+
+.modal-footer .btn {
+    margin-bottom: 0;
+    font-weight: 100 !important;
+}
+
+#bgw span {
+    speak: none;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    font-size: 32px !important;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+#bgw p {
+    margin-top: 6px;
+}
+
+/* #bgw{
+} */
+
+#NoticeBar{
+    opacity: .2;
+    margin-top:10px;
+    margin-left:auto;
+    margin-right:auto;
+}
+
+.close:hover, .close:focus {
+    color: #000000;
+    text-decoration: none;
+    cursor: pointer;
+    opacity: 0.5;
+}
+
+.breakall {
+    word-break: keep-all;
+    word-wrap: break-word;
+    white-space: pre-wrap;
+}
+
+.yellow {
+    color: #e39a00;
+    border: none;
+}
+
+.yellow:hover {
+    color: #e39a00;
+    background-color: #fff;
+    border: none;
+}
+
+.green {
+    color: #2ecc71;
+    border: none;
+}
+
+.green:hover {
+    color: #2ecc71;
+    background-color: #fff;
+    border: none;
+}
+
+.red {
+    color: #e74c3c;
+    border: none;
+}
+
+.red:hover {
+    color: #e74c3c;
+    background-color: #fff;
+    border: none;
+}
