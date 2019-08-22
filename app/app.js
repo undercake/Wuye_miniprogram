@@ -3,9 +3,7 @@ const rqst = require('utils/request.js');
 
 App({
     globalData: {
-        baseURI_: 'https://test.dlz149.me/miniapp/slapp/new/',
-        baseURI: 'https://test.dlz149.me/miniapp/server/slapp/new/',
-        baseURI_1: 'http://localhost:8888/miniapp/wuye/slapp/new/',
+        baseURI: 'https://proj.dlz149.me/wuye/',
         isLogin: false,
         loginData: {},
         buttonColor: "#05509d",
